@@ -17,7 +17,7 @@ export function RegistrationPage(props) {
       <TitleBar />
       <h2>Register</h2>
       <RegistrationForm />
-      <Link to="/login">Login</Link>
+      <p>Aleady have an account? Click <Link to="/login">here</Link> to login.</p>
     </div>
   );
 }

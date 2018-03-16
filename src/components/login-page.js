@@ -11,7 +11,7 @@ export default function LoginPage(props) {
       <TitleBar />
       <h2>Login</h2>
       <LoginForm />
-      <Link to="/register">Register</Link>
+      <p>Don't have an account yet? Click <Link to="/register">here</Link> to register</p>
     </div>
   );
 }

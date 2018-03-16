@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import TitleBar from './title-bar';
 import Footer from './footer';
 
-import {Link} from 'react-router-dom';
-
 import './about.css';
 
 class About extends Component {

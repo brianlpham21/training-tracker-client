@@ -5,7 +5,7 @@ import StartScreen from './start-screen';
 import MainContent from './main-content';
 import Footer from './footer';
 
-import {Link, Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 
 export function LandingPage(props) {
   // If we are logged in redirect straight to the user's dashboard

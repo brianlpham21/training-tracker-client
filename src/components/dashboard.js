@@ -5,7 +5,6 @@ import {fetchProtectedData} from '../actions/protected-data';
 
 import AddForm from './add-form';
 import MiniWorkoutLog from './mini-workout-log';
-import WorkoutLog from './workout-log';
 import Footer from './footer';
 
 import {Link} from 'react-router-dom';
