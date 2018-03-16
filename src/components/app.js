@@ -5,7 +5,9 @@ import {Route, withRouter} from 'react-router-dom';
 import HeaderBar from './header-bar';
 import LandingPage from './landing-page';
 import Dashboard from './dashboard';
+import LoginPage from './login-page';
 import RegistrationPage from './registration-page';
+import About from './about';
 import {refreshAuthToken} from '../actions/auth';
 
 export class App extends React.Component {
@@ -44,7 +46,9 @@ export class App extends React.Component {
                 <HeaderBar />
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/dashboard" component={Dashboard} />
+                <Route exact path="/login" component={LoginPage} />
                 <Route exact path="/register" component={RegistrationPage} />
+                <Route exact path="/about" component={About} />
             </div>
         );
     }
