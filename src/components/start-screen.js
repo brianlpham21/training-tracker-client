@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import './nav-bar.css';
+import './start-screen.css';
 
-export default function NavBar() {
+export default function StartScreen() {
   return (
-    <div className='nav-bar'>
+    <div className='start-screen'>
       <div className='container'>
         <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/118696-200.png' className='main-logo'/>
         <h2>Training Tracker</h2>

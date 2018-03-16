@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 
-import TitleBar from './title-bar';
+import UserTitleBar from './user-title-bar';
 
 export class HeaderBar extends React.Component {
   logOut() {
@@ -17,7 +17,7 @@ export class HeaderBar extends React.Component {
     if (this.props.loggedIn) {
       logOutButton = (
         <div>
-          <TitleBar />
+          <UserTitleBar />
           <button onClick={() => this.logOut()}>Log out</button>
         </div>
       );

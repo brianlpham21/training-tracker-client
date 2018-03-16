@@ -1,8 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
 
+import TitleBar from './title-bar';
 import RegistrationForm from './registration-form';
+
+import {Link, Redirect} from 'react-router-dom';
 
 export function RegistrationPage(props) {
   // If we are logged in (which happens automatically when registration
@@ -12,7 +14,7 @@ export function RegistrationPage(props) {
   }
   return (
     <div className="home">
-      <Link to="/">Home</Link>
+      <TitleBar />
       <h2>Register</h2>
       <RegistrationForm />
       <Link to="/login">Login</Link>
