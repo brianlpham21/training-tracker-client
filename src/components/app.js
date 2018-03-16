@@ -4,10 +4,13 @@ import {Route, withRouter} from 'react-router-dom';
 
 import HeaderBar from './header-bar';
 import LandingPage from './landing-page';
-import Dashboard from './dashboard';
 import LoginPage from './login-page';
 import RegistrationPage from './registration-page';
 import About from './about';
+import Dashboard from './dashboard';
+import WorkoutLog from './workout-log';
+import EditWorkout from './edit-workout';
+
 import {refreshAuthToken} from '../actions/auth';
 
 export class App extends React.Component {
@@ -49,6 +52,8 @@ export class App extends React.Component {
         <Route exact path="/register" component={RegistrationPage} />
         <Route exact path="/about" component={About} />
         <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/dashboard/workoutlog" component={WorkoutLog} />
+        <Route exact path="/editworkout" component={EditWorkout} />
       </div>
     );
   }
