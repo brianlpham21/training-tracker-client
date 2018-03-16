@@ -1,0 +1,47 @@
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  background-color: darkGrey
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+
+.register-button:hover, .login-button:hover {
+  box-shadow: 0 0 10px white
+}
+
+.nav-bar {
+  background: black url('https://www.crossfitdaedalus.com/wp-content/uploads/2015/04/Gym-Background1.png') no-repeat fixed center;
+  color: white;
+  height: 100vh;
+  text-align: center
+}
+
+.main-logo {
+  background-color: white;
+  border-radius: 50%
+}
+
+.container {
+  padding: 150px 0
+}
+
+.arrow-down {
+  padding: 40px 0;
+  height: 20px
+}

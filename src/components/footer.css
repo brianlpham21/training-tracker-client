@@ -1,0 +1,26 @@
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 20px 0 0 0
+}
+
+.footer {
+  background-color: grey;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.social-media-icons a {
+  color: black
+}
+
+.social-media-icons a:hover {
+  color: grey
+}
+
+.social-media-icon {
+  height: 35px
+}

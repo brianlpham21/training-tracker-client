@@ -1,0 +1,28 @@
+.main-about {
+  background-color: lightGrey;
+  padding: 30px 20px 15px 20px;
+  line-height: 25px;
+  text-align: center
+}
+
+.main-about-link {
+  color: black;
+}
+
+.main-about-link:hover {
+  color: grey;
+}
+
+.main-about-link-component {
+  text-decoration: none
+}
+
+.about-button {
+  padding: 5px 20px;
+  border-radius: 100px
+}
+
+.about-button:hover {
+  background-color: white;
+  color: dimGrey
+}
