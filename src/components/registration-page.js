@@ -3,21 +3,25 @@ import {connect} from 'react-redux';
 
 import TitleBar from './title-bar';
 import RegistrationForm from './registration-form';
+import Footer from './footer';
 
 import {Link, Redirect} from 'react-router-dom';
 
+import './registration-page.css'
+
 export function RegistrationPage(props) {
-  // If we are logged in (which happens automatically when registration
-  // is successful) redirect to the user's dashboard
   if (props.loggedIn) {
     return <Redirect to="/dashboard" />;
   }
   return (
-    <div className="home">
+    <div className="registration-page">
       <TitleBar />
-      <h2>Register</h2>
-      <RegistrationForm />
-      <p>Aleady have an account? Click <Link to="/login">here</Link> to login.</p>
+      <div className="registration-form-section">
+        <h2>Register</h2>
+        <RegistrationForm />
+        <p>Aleady have an account? Click <Link to="/login">here</Link> to login.</p>
+      </div>
+      <Footer />
     </div>
   );
 }
