@@ -1,11 +1,15 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import LoginForm from './login-form';
 import TitleBar from './title-bar';
 
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
-export default function LoginPage(props) {
+export function LoginPage(props) {
+  if (props.loggedIn) {
+    return <Redirect to="/dashboard" />;
+  }
   return (
     <div>
       <TitleBar />
@@ -15,3 +19,9 @@ export default function LoginPage(props) {
     </div>
   );
 }
+
+const mapStateToProps = state => ({
+  loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(LoginPage);

@@ -1,12 +1,12 @@
 .title-bar {
   background-color: dimGrey;
-  padding: 10px 0;
+  padding: 5px 0;
   text-align: center
 }
 
 .home-icon {
-  height: 30px;
+  height: 25px;
   position: absolute;
-  left: 20px;
+  left: 25px;
   top: 25px
 }
