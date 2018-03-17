@@ -19,7 +19,7 @@ export function LoginPage(props) {
       <div className='login-form-section'>
         <h2>Login</h2>
         <LoginForm />
-        <p>Don't have an account yet? Click <Link to="/register">here</Link> to register</p>
+        <p>Don't have an account yet? Click <Link to="/register">here</Link> to register.</p>
       </div>
       <Footer />
     </div>
