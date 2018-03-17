@@ -4,9 +4,9 @@
   text-align: center
 }
 
-.home-icon {
-  height: 25px;
+.back-button {
+  background-color: grey;
   position: absolute;
   left: 25px;
-  top: 25px
+  top: 20px
 }
