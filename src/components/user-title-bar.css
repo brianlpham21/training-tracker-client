@@ -1,7 +1,8 @@
 .user-title-bar {
-  background-color: dimGrey;
+  background-color: #2b2c2d;
   padding: 10px 0;
-  text-align: center
+  text-align: center;
+  color: white
 }
 
 .home-icon {

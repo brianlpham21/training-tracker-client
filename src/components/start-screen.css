@@ -9,11 +9,11 @@ ul {
   padding: 0;
 }
 
-button {
-  padding: 10px;
+.register-button, .login-button {
+  padding: 10px 20px;
   border-radius: 10px;
-  font-size: 12px;
-  background-color: darkGrey
+  font-size: 14px;
+  background-color: lightGrey
 }
 
 button:hover {
