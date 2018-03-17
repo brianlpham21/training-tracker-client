@@ -9,6 +9,8 @@ import Footer from './footer';
 
 import {Link} from 'react-router-dom';
 
+import './dashboard.css';
+
 export class Dashboard extends React.Component {
     componentDidMount() {
         this.props.dispatch(fetchProtectedData());
@@ -23,7 +25,7 @@ export class Dashboard extends React.Component {
                 <div className="dashboard-name">Name: {this.props.name}</div>
                 <AddForm />
                 <MiniWorkoutLog />
-                <Link to='/dashboard/workoutlog'><button>Workout Log</button></Link>
+                <Link to='/dashboard/workoutlog'><button className='workout-log-button'>Workout Log</button></Link>
                 <div className="dashboard-protected-data">
                     Protected data: {this.props.protectedData}
                 </div>

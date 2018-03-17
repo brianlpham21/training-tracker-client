@@ -1,0 +1,8 @@
+.workout-log-button {
+  padding: 10px 15px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  font-size: 14px;
+  color: black;
+  margin-top: 10px
+}

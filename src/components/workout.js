@@ -4,6 +4,8 @@ import Exercise from './exercise';
 
 import {Link} from 'react-router-dom';
 
+import './workout.css';
+
 class Workout extends Component {
   render() {
     return (
@@ -11,7 +13,7 @@ class Workout extends Component {
         <p>These are the exercises in the workout:</p>
         <Exercise />
         <Exercise />
-        <Link to='/editworkout'><button>Edit</button></Link>
+        <Link to='/editworkout'><button className='edit-button'>Edit</button></Link>
       </div>
     );
   }

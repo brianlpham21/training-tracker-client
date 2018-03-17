@@ -5,6 +5,8 @@ import {clearAuthToken} from '../local-storage';
 
 import UserTitleBar from './user-title-bar';
 
+import './header-bar.css';
+
 export class HeaderBar extends React.Component {
   logOut() {
     this.props.dispatch(clearAuth());
@@ -17,7 +19,7 @@ export class HeaderBar extends React.Component {
       logOutButton = (
         <div>
           <UserTitleBar />
-          <button onClick={() => this.logOut()}>Log out</button>
+          <button onClick={() => this.logOut()} className='logout-button'>Log out</button>
         </div>
       );
     }
