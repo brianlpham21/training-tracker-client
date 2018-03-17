@@ -6,8 +6,11 @@
 }
 
 .back-button {
-  background-color: grey;
+  background-color: lightGrey;
   position: absolute;
   left: 25px;
-  top: 20px
+  top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
 }

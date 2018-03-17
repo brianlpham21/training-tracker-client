@@ -19,7 +19,8 @@
 
 .about-button {
   padding: 5px 20px;
-  border-radius: 100px
+  border-radius: 100px;
+  background-color: white
 }
 
 .about-button:hover {
