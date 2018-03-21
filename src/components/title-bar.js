@@ -7,7 +7,7 @@ export default function TitleBar() {
   return (
     <div className='title-bar'>
       <Link to='/'><button className='back-button'>back</button></Link>
-      <h2>Training Tracker</h2>
+      <h2 className='title-bar-title'>Training Tracker</h2>
     </div>
   )
 }

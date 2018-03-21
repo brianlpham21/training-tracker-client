@@ -9,11 +9,24 @@ ul {
   padding: 0;
 }
 
+.title {
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+  margin-bottom: 20px
+}
+
+.title-description {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 17px;
+  margin: 0
+}
+
 .register-button, .login-button {
   padding: 10px 20px;
   border-radius: 10px;
   font-size: 14px;
-  background-color: lightGrey
+  background-color: lightGrey;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 button:hover {

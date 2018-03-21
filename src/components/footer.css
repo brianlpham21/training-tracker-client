@@ -11,6 +11,8 @@ ul {
   background-color: grey;
   padding: 10px 0;
   text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 18px
 }
 
 .social-media-icons a {

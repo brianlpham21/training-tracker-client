@@ -1,6 +1,7 @@
 .about-text {
   padding: 5px 20px 15px 20px;
-  line-height: 25px
+  line-height: 25px;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .about-logo {
