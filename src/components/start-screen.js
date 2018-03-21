@@ -9,7 +9,7 @@ export default function StartScreen() {
       <div className='container'>
         <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/118696-200.png' alt='main-logo' className='main-logo'/>
         <h2>Training Tracker</h2>
-        <p>track your fitness goals and progress</p>
+        <p>Set and Track your Fitness Goals and Progress</p>
         <ul>
           <li>
             <Link to='/register'><button className='register-button'>Register</button></Link>

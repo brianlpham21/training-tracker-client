@@ -11,8 +11,7 @@ class WorkoutLog extends Component {
   render() {
     return (
       <div className='workout-log'>
-        <h2>Routine Name</h2>
-        <p>These are a list of the workouts!</p>
+        <h3>Workouts</h3>
         <Workout />
         <Workout />
         <Workout />

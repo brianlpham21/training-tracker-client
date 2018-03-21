@@ -1,9 +1,8 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
-
-import UserTitleBar from './user-title-bar';
 
 import './header-bar.css';
 
@@ -17,8 +16,9 @@ export class HeaderBar extends React.Component {
     let logOutButton;
     if (this.props.loggedIn) {
       logOutButton = (
-        <div>
-          <UserTitleBar />
+        <div className='user-title-bar'>
+          <Link to='/'><img src='https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-512.png' alt='home-icon' className='home-icon'/></Link>
+          <h2>Training Tracker</h2>
           <button onClick={() => this.logOut()} className='logout-button'>Log out</button>
         </div>
       );

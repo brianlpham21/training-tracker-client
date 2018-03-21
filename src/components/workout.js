@@ -10,7 +10,7 @@ class Workout extends Component {
   render() {
     return (
       <div>
-        <p>These are the exercises in the workout:</p>
+        <p>Workout:</p>
         <Exercise />
         <Exercise />
         <Link to='/editworkout'><button className='edit-button'>Edit</button></Link>

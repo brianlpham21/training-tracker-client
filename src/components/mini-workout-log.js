@@ -13,7 +13,7 @@ class MiniWorkoutLog extends Component {
   render() {
     return (
       <div>
-        <h4>These are a list of recent workouts!</h4>
+        <h4>Recent Workouts</h4>
         <Workout />
       </div>
     );
