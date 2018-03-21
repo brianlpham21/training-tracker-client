@@ -18,15 +18,11 @@ export class Dashboard extends React.Component {
   render() {
     return (
       <div className="dashboard">
-        <div className="dashboard-username">
-            Username: {this.props.username}
-        </div>
-        <div className="dashboard-name">Name: {this.props.name}</div>
         <AddForm />
         <MiniWorkoutLog />
         <Link to='/dashboard/workoutlog'><button className='workout-log-button'>Workout Log</button></Link>
         <div className="dashboard-protected-data">
-            Protected data: {this.props.protectedData}
+            <p>Protected data: {this.props.protectedData}</p>
         </div>
       </div>
     );
