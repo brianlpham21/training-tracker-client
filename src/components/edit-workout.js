@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 
+import './edit-workout.css';
+
 class EditWorkout extends Component {
   render() {
     return (
-      <div>
+      <div className='edit-section'>
         <p>Edit This Workout</p>
         <input />
         <button>Submit</button>
