@@ -6,9 +6,9 @@ export default function Footer() {
   return (
     <div className='footer'>
       <ul className='social-media-icons'>
-        <li><a href='www.facebook.com'><img src='http://www.danielas.com.au/www/1015/files/facebook-5-xxl.png' alt='facebook-icon' className='social-media-icon' /></a></li>
-        <li><a href='www.instagram.com'><img src='https://static1.squarespace.com/static/54b83998e4b0a17414b429a9/54d2ccbfe4b08b02e24f050a/54d2ccbfe4b0526a666a23d5/1470421919330/Instagram+Icon.gif' alt='instagram-icon' className='social-media-icon' /></a></li>
-        <li><a href='www.twitter.com'><img src='https://image.flaticon.com/icons/svg/56/56729.svg' alt='twitter-icon' className='social-media-icon' /></a></li>
+        <li><a href='www.facebook.com' target='_blank'><img src='http://www.danielas.com.au/www/1015/files/facebook-5-xxl.png' alt='facebook-icon' className='social-media-icon' /></a></li>
+        <li><a href='www.instagram.com' target='_blank'><img src='https://static1.squarespace.com/static/54b83998e4b0a17414b429a9/54d2ccbfe4b08b02e24f050a/54d2ccbfe4b0526a666a23d5/1470421919330/Instagram+Icon.gif' alt='instagram-icon' className='social-media-icon' /></a></li>
+        <li><a href='www.twitter.com' target='_blank'><img src='https://image.flaticon.com/icons/svg/56/56729.svg' alt='twitter-icon' className='social-media-icon' /></a></li>
         <li><a href=''><img src='http://concept4u.com/wp-content/uploads/2005/12/email-icon-transparent-background.png' alt='email-icon' className='social-media-icon' /></a></li>
         <h5>&copy; Copyright 2018 | Training Tracker</h5>
       </ul>
