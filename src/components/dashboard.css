@@ -1,12 +1,24 @@
-.workout-log-button {
-  padding: 10px 15px;
-  border: 2px solid grey;
-  border-radius: 10px;
-  font-size: 14px;
-  color: black;
-  margin-top: 10px
-}
-
 .dashboard {
   padding: 20px
+}
+
+.workout-log-button {
+  border: 2px solid grey;
+  border-radius: 10px;
+  color: black;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+
+@media only screen and (max-width: 420px) {
+
+}
+
+@media only screen and (min-width: 581px) and (max-width: 900px) {
+
+}
+
+@media only screen and (min-width: 901px) {
+
 }
