@@ -1,14 +1,15 @@
-.about-text {
-  padding: 5px 20px 15px 20px;
-  line-height: 25px;
-  font-family: 'Titillium Web', sans-serif;
+.image-container {
+  text-align: center;
+  padding: 25px 0 0px 0
 }
 
 .about-logo {
-  height: 100px
+  height: 100px;
+  opacity: 0.8
 }
 
-.image {
-  text-align: center;
-  padding: 25px 0 0px 0
+.about-text {
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 25px;
+  padding: 5px 30px 15px 30px;
 }

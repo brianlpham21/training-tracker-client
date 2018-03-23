@@ -1,9 +1,13 @@
-.main-about {
-  background-color: lightGrey;
-  padding: 40px 20px 25px 20px;
-  line-height: 25px;
-  text-align: center;
-  font-family: 'Titillium Web', sans-serif;
+.about-button {
+  background-color: white;
+  border: 2px solid gold;
+  border-radius: 100px;
+  padding: 5px 30px;
+}
+
+.about-button:hover {
+  box-shadow: 0 0 5px grey;
+  cursor: pointer
 }
 
 .main-about-link {
@@ -12,21 +16,18 @@
   font-size: 22px
 }
 
-.main-about-link:hover {
-  color: grey;
-}
-
 .main-about-link-component {
   text-decoration: none
 }
 
-.about-button {
-  padding: 5px 20px;
-  border-radius: 100px;
-  background-color: white
+.main-about {
+  background-color: lightGrey;
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 25px;
+  padding: 45px 30px 25px 30px;
+  text-align: center;
 }
 
-.about-button:hover {
-  background-color: white;
-  color: dimGrey
+.main-about p {
+  padding-top: 10px
 }

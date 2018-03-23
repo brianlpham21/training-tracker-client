@@ -14,7 +14,7 @@ export function LandingPage(props) {
   }
 
   return (
-    <div className="home">
+    <div>
       <StartScreen />
       <MainContent />
       <Footer />

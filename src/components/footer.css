@@ -1,3 +1,11 @@
+.footer {
+  background-color: grey;
+  padding: 10px 0;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 18px
+}
+
 li {
   list-style: none;
 }
@@ -7,12 +15,8 @@ ul {
   padding: 20px 0 0 0
 }
 
-.footer {
-  background-color: grey;
-  padding: 10px 0;
-  text-align: center;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 18px
+.social-media-icon {
+  height: 35px
 }
 
 .social-media-icons a {
@@ -21,8 +25,4 @@ ul {
 
 .social-media-icons a:hover {
   opacity: 0.5
-}
-
-.social-media-icon {
-  height: 35px
 }

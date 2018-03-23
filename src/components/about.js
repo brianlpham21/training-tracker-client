@@ -10,7 +10,7 @@ class About extends Component {
     return (
       <div className='about'>
         <TitleBar />
-        <div className='image'>
+        <div className='image-container'>
           <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/118696-200.png' alt='about-logo' className='about-logo' />
         </div>
         <div className='about-text'>
