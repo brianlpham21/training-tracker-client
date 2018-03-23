@@ -1,7 +1,10 @@
 .registration-form-section {
-  padding: 10px 20px;
   font-family: 'Titillium Web', sans-serif;
+  padding: 10px 20px;
+}
 
+.registration-form-section h2 {
+  margin: 5px 0 15px 0
 }
 
 .registration-form-section p {

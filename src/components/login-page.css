@@ -1,17 +1,12 @@
 .login-form-section {
-  padding: 10px 20px;
   font-family: 'Titillium Web', sans-serif;
+  padding: 10px 20px;
+}
+
+.login-form-section h2 {
+  margin: 5px 0 15px 0
 }
 
 .login-form-section p {
   font-size: 14px
 }
-
-/* .login-button {
-  padding: 10px 15px;
-  border: 2px solid grey;
-  border-radius: 10px;
-  font-size: 14px;
-  color: black;
-  margin-top: 10px
-} */

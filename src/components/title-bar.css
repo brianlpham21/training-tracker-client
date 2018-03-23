@@ -1,23 +1,23 @@
-.title-bar {
-  background-color: #2b2c2d;
-  padding: 5px 0;
-  text-align: center;
-  color: white;
-}
-
 .back-button {
   background-color: lightGrey;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  padding: 10px 12px;
   border-radius: 10px;
   font-size: 12px;
   font-family: 'Titillium Web', sans-serif;
+  left: 20px;
+  padding: 8px 10px;
+  position: absolute;
+  top: 20px;
 }
 
 .title-bar-title {
-  font-size: 25px;
   font-family: 'Lobster', cursive;
+  font-size: 24px;
   margin: 18px
+}
+
+.title-bar {
+  background-color: #2b2c2d;
+  color: white;
+  padding: 5px 0;
+  text-align: center;
 }
