@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 
 import TitleBar from './title-bar';
 import LoginForm from './login-form';
-import Footer from './footer';
 
 import {Link, Redirect} from 'react-router-dom';
 
@@ -21,7 +20,6 @@ export function LoginPage(props) {
         <LoginForm />
         <p>Don't have an account yet? Click <Link to="/register">here</Link> to register.</p>
       </div>
-      <Footer />
     </div>
   );
 }

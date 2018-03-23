@@ -10,6 +10,7 @@ import About from './about';
 import Dashboard from './dashboard';
 import WorkoutLog from './workout-log';
 import EditWorkout from './edit-workout';
+import Footer from './footer';
 
 import {refreshAuthToken} from '../actions/auth';
 
@@ -46,14 +47,17 @@ export class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <HeaderBar />
-        <Route exact path="/" component={LandingPage} />
-        <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/register" component={RegistrationPage} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/dashboard/workoutlog" component={WorkoutLog} />
-        <Route exact path="/editworkout" component={EditWorkout} />
+        <div className="main-content">
+          <HeaderBar />
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/register" component={RegistrationPage} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/dashboard/workoutlog" component={WorkoutLog} />
+          <Route exact path="/editworkout" component={EditWorkout} />
+        </div>
+        <Footer />
       </div>
     );
   }

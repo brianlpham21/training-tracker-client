@@ -33,3 +33,15 @@
 .user-title-bar * {
   display: inline-block;
 }
+
+.header-bar-link-component {
+  text-decoration: none
+}
+
+.header-bar-title {
+  color: white;
+}
+
+.header-bar-title:hover {
+  text-shadow: 0 0 1px white;
+}

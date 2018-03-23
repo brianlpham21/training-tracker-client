@@ -18,7 +18,7 @@ export class HeaderBar extends React.Component {
       logOutButton = (
         <div className='user-title-bar'>
           <Link to='/'><img src='https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-512.png' alt='home-icon' className='home-icon'/></Link>
-          <h2>Training Tracker</h2>
+          <Link to='/' className='header-bar-link-component'><h2 className='header-bar-title'>Training Tracker</h2></Link>
           <button onClick={() => this.logOut()} className='logout-button'>Log out</button>
         </div>
       );

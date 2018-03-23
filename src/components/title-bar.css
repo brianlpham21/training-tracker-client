@@ -31,8 +31,18 @@
   text-align: center;
 }
 
+@media only screen and (min-width: 581px) and (max-width: 900px) {
+    .title-bar-title {
+      font-size: 32px
+    }
+}
+
 @media only screen and (min-width: 901px) {
   .back-button {
     display: none
+  }
+
+  .title-bar-title {
+    font-size: 34px
   }
 }

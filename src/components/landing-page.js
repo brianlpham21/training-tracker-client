@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 
 import StartScreen from './start-screen';
 import MainContent from './main-content';
-import Footer from './footer';
 
 import {Redirect} from 'react-router-dom';
 
@@ -17,7 +16,6 @@ export function LandingPage(props) {
     <div>
       <StartScreen />
       <MainContent />
-      <Footer />
     </div>
   );
 }

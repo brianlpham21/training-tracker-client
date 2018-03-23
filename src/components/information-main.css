@@ -52,8 +52,8 @@
 
 @media only screen and (min-width: 901px) {
   .main-information-icon {
-    height: 320px;
-    padding: 10px 30px 35px 15px;
+    height: 250px;
+    padding: 40px 50px 65px 15px;
   }
 
   .main-information p {
