@@ -1,13 +1,12 @@
 .logout-button {
-  position: absolute;
-  right: 15px;
-  top: 22px;
   background-color: lightGrey;
-  position: absolute;
-  padding: 7px;
   border-radius: 10px;
   font-size: 12px;
   font-family: 'Titillium Web', sans-serif;
+  padding: 8px 10px;
+  position: absolute;
+  right: 15px;
+  top: 22px;
 }
 
 .user-title-bar {
@@ -17,11 +16,15 @@
   color: white
 }
 
-.home-icon {
-  height: 30px;
+.home-button {
+  background-color: lightGrey;
+  border-radius: 10px;
+  font-size: 12px;
+  font-family: 'Titillium Web', sans-serif;
+  left: 20px;
+  padding: 8px 10px;
   position: absolute;
-  left: 25px;
-  top: 24px
+  top: 22px;
 }
 
 .user-title-bar h2 {
