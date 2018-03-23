@@ -1,7 +1,10 @@
+.main-instructions-container {
+  background-color: gold;
+}
+
 .main-instructions {
   /* background: white url("https://www.publicdomainpictures.net/pictures/220000/velka/open-blank-notebook-black-amp-white.jpg") no-repeat fixed center; */
   /* background: white url('http://www.codenaturel.com/663-thickbox_default/stitched-notebook-lined-a5-natural-brown.jpg') fixed center; */
-  background-color: gold;
   padding: 50px 30px 35px 30px;
   line-height: 25px;
   text-align: center;
@@ -10,4 +13,38 @@
 
 .instruction-icon {
   height: 150px;
+}
+
+@media only screen and (max-width: 420px) {
+  .main-instructions h2 {
+    font-size: 30px;
+    line-height: 35px;
+    padding: 0 20px
+  }
+
+  .instruction-icon {
+    height: 130px;
+  }
+}
+
+@media only screen and (min-width: 581px) and (max-width: 900px) {
+  .main-instructions {
+    padding: 45px 90px 35px 90px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .main-instructions {
+    margin: auto;
+    max-width: 800px;
+    padding: 55px 90px 45px 90px;
+  }
+
+  .main-instructions h2 {
+    font-size: 40px;
+  }
+
+  .instruction-icon {
+    height: 180px;
+  }
 }

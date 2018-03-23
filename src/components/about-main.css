@@ -6,7 +6,7 @@
 }
 
 .about-button:hover {
-  box-shadow: 0 0 5px grey;
+  box-shadow: 0 0 20px gold;
   cursor: pointer
 }
 
@@ -20,8 +20,11 @@
   text-decoration: none
 }
 
-.main-about {
+.main-about-container {
   background-color: lightGrey;
+}
+
+.main-about {
   font-family: 'Titillium Web', sans-serif;
   line-height: 25px;
   padding: 45px 30px 25px 30px;
@@ -30,4 +33,24 @@
 
 .main-about p {
   padding-top: 10px
+}
+
+@media only screen and (max-width: 340px) {
+  .about-button {
+    padding: 3px 20px;
+  }
+}
+
+@media only screen and (min-width: 581px) and (max-width: 900px) {
+  .main-about {
+    padding: 45px 90px 35px 90px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .main-about {
+    margin: auto;
+    max-width: 800px;
+    padding: 55px 90px 45px 90px;
+  }
 }
