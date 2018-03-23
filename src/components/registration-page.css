@@ -10,3 +10,19 @@
 .registration-form-section p {
   font-size: 14px
 }
+
+input {
+  width: 300px
+}
+
+@media only screen and (min-width: 581px) {
+  .registration-form-section {
+    margin: auto;
+    max-width: 500px;
+    padding: 20px 20px;
+  }
+
+  input {
+    width: 300px
+  }
+}

@@ -9,10 +9,19 @@
   top: 20px;
 }
 
+.title-bar-link-component {
+  text-decoration: none
+}
+
 .title-bar-title {
+  color: white;
   font-family: 'Lobster', cursive;
   font-size: 24px;
   margin: 18px;
+}
+
+.title-bar-title:hover {
+  text-shadow: 0 0 1px white;
 }
 
 .title-bar {
