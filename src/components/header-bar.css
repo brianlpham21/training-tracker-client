@@ -74,7 +74,11 @@
     font-size: 34px
   }
 
-  .home-button, .logout-button {
+  .home-button {
+    display: none
+  }
+
+  .logout-button {
     padding: 10px 12px;
     font-size: 14px;
     top: 24px
