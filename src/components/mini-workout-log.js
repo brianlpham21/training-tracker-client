@@ -11,14 +11,9 @@ class MiniWorkoutLog extends Component {
   }
 
   render() {
-    let i = this.props.workout;
-    let array = Object.values(i);
-    console.log(array);
-
     return (
       <div>
         <h4>Recent Workouts</h4>
-        <p>{typeof this.props.workout}</p>
         <Workout />
       </div>
     );

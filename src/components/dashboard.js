@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
 
-import AddForm from './add-form';
+import AddWorkout from './add-workout';
 import MiniWorkoutLog from './mini-workout-log';
 
 import {Link} from 'react-router-dom';
@@ -18,7 +18,7 @@ export class Dashboard extends React.Component {
   render() {
     return (
       <div className="dashboard">
-        <AddForm />
+        <AddWorkout />
         <MiniWorkoutLog />
         <Link to='/dashboard/workoutlog'><button className='workout-log-button'>Workout Log</button></Link>
         <div className="dashboard-protected-data">

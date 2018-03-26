@@ -9,7 +9,7 @@ class EditWorkout extends Component {
   render() {
     return (
       <div className='edit-section'>
-        <p>Edit This Workout</p>
+        <p>Workout</p>
         <input />
         <button>Submit</button>
       </div>

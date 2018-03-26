@@ -61,7 +61,7 @@ export const fetchProtectedData = () => (dispatch, getState) => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then(data => (data.reverse()))
-        .then((name) => dispatch(fetchProtectedDataSuccess(name)))
+        .then(({name}) => dispatch(fetchProtectedDataSuccess(name)))
         .catch(err => {
             dispatch(fetchProtectedDataError(err));
         });
