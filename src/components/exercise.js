@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
 import ExerciseDataSet from './exercise-data-set';
-import ExerciseDataWeight from './exercise-data-weight';
-import ExerciseDataRepetitions from './exercise-data-repetitions';
 
 class Exercise extends Component {
   render() {
