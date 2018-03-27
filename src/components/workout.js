@@ -16,7 +16,7 @@ class Workout extends Component {
       <div>
         <p>Workout: {this.props.name}</p>
         <div>{exercises}</div>
-        <Link to='/editworkout'><button className='edit-button'>Edit</button></Link>
+        <Link to='/editworkout'><button className='edit-workout-button'>Edit</button></Link>
       </div>
     );
   }

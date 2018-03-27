@@ -3,6 +3,8 @@ import {Field, reduxForm, focus} from 'redux-form';
 
 import Input from './input';
 
+import './add-workout.css';
+
 class AddWorkout extends Component {
   render() {
     // onSubmit(value) {
@@ -23,7 +25,7 @@ class AddWorkout extends Component {
         <Field component={Input} type="text" name="workoutName" />
         <button
           type="submit"
-          className="submit-button"
+          className="add-workout-button"
           disabled={this.props.pristine || this.props.submitting}>
           Start Workout
         </button>

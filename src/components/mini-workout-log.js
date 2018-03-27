@@ -30,8 +30,6 @@ class MiniWorkoutLog extends Component {
   }
 }
 
-// export default MiniWorkoutLog;
-
 const mapStateToProps = state => {
   return {
     workout: state.protectedData.data

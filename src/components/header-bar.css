@@ -9,6 +9,11 @@
   top: 22px;
 }
 
+.logout-button:hover, .home-button:hover {
+  box-shadow: 0 0 5px white;
+  cursor: pointer
+}
+
 .header-title-bar {
   background-color: #2b2c2d;
   color: white;
@@ -74,11 +79,7 @@
     font-size: 34px
   }
 
-  .home-button {
-    display: none
-  }
-
-  .logout-button {
+  .logout-button, .home-button {
     padding: 10px 12px;
     font-size: 14px;
     top: 24px

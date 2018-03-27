@@ -5,7 +5,7 @@ import ExerciseDataSet from './exercise-data-set';
 class Exercise extends Component {
   render() {
     const sets = this.props.sets.map((set, index) => {
-      return <ExerciseDataSet key={index} {...set}/>
+      return <ExerciseDataSet key={index} setNumber={index} {...set}/>
     })
 
     return (

@@ -13,42 +13,6 @@ export const fetchProtectedDataError = error => ({
     error
 });
 
-// export const fetchProtectedData = () => (dispatch, getState) => {
-//     const authToken = getState().auth.authToken;
-//     return fetch(`${API_BASE_URL}/exercises`, {
-//         method: 'GET',
-//         headers: {
-//             // Provide our auth token as credentials
-//             Authorization: `Bearer ${authToken}`
-//         }
-//     })
-//         .then(res => normalizeResponseErrors(res))
-//         .then(res => res.json())
-//         .then(data => data[0])
-//         .then(({name}) => dispatch(fetchProtectedDataSuccess(name)))
-//         .catch(err => {
-//             dispatch(fetchProtectedDataError(err));
-//         });
-// };
-
-// export const fetchProtectedData = () => (dispatch, getState) => {
-//     const authToken = getState().auth.authToken;
-//     return fetch(`${API_BASE_URL}/workouts`, {
-//         method: 'GET',
-//         headers: {
-//             // Provide our auth token as credentials
-//             Authorization: `Bearer ${authToken}`
-//         }
-//     })
-//         .then(res => normalizeResponseErrors(res))
-//         .then(res => res.json())
-//         .then(data => (data.reverse()[0]))
-//         .then((name) => dispatch(fetchProtectedDataSuccess(name)))
-//         .catch(err => {
-//             dispatch(fetchProtectedDataError(err));
-//         });
-// };
-
 export const fetchProtectedData = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
     return fetch(`${API_BASE_URL}/workouts`, {

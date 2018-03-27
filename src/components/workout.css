@@ -1,8 +1,13 @@
-.edit-button {
+.edit-workout-button {
   padding: 5px 10px;
   border: 1px solid grey;
   border-radius: 10px;
   font-size: 14px;
   color: black;
   margin-top: 10px
+}
+
+.edit-workout-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer
 }

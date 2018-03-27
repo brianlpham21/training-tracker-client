@@ -21,9 +21,6 @@ export class Dashboard extends React.Component {
         <AddWorkout />
         <MiniWorkoutLog />
         <Link to='/dashboard/workoutlog'><button className='workout-log-button'>Workout Log</button></Link>
-        <div className="dashboard-protected-data">
-            <p>Protected data: {this.props.protectedData}</p>
-        </div>
       </div>
     );
   }
