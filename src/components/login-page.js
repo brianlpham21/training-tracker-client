@@ -17,6 +17,7 @@ export function LoginPage(props) {
       <TitleBar />
       <div className='login-form-section'>
         <h2>Login</h2>
+        <p>For demo account use: Username (demo) and Password (brianbrian)</p>
         <LoginForm />
         <p>Don't have an account yet? Click <Link to="/register">here</Link> to register.</p>
       </div>

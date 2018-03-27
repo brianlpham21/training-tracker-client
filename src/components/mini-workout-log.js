@@ -11,10 +11,13 @@ class MiniWorkoutLog extends Component {
   }
 
   render() {
+    console.log(this.props.workout);
+
     return (
       <div>
         <h4>Recent Workouts</h4>
-        <Workout />
+        <p>{this.props.workout}</p>
+        <Workout data={this.props.workout}/>
       </div>
     );
   }

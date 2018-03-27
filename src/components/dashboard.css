@@ -16,9 +16,15 @@
 }
 
 @media only screen and (min-width: 581px) and (max-width: 900px) {
-
+  .dashboard {
+    padding: 45px 90px 35px 90px;
+  }
 }
 
 @media only screen and (min-width: 901px) {
-
+  .dashboard {
+    margin: auto;
+    max-width: 800px;
+    padding: 40px 90px 60px 90px;
+  }
 }

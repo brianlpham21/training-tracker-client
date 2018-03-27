@@ -1,12 +1,19 @@
 .back-button {
-  background-color: lightGrey;
+  background-color: dimGrey;
+  border-color: black;
   border-radius: 10px;
+  color: silver;
+  cursor: pointer;
   font-size: 12px;
   font-family: 'Titillium Web', sans-serif;
   left: 20px;
   padding: 8px 10px;
   position: absolute;
   top: 20px;
+}
+
+.back-button:hover {
+  box-shadow: 0 0 1px white;
 }
 
 .title-bar-link-component {
@@ -32,20 +39,21 @@
 }
 
 @media only screen and (min-width: 581px) and (max-width: 900px) {
-    .title-bar-title {
-      font-size: 32px
-    }
+  .title-bar-title {
+    font-size: 32px;
+  }
 
-    .back-button {
-      padding: 10px 12px;
-      font-size: 14px;
-      top: 22px
-    }
+  .back-button {
+    padding: 10px 12px;
+    font-size: 14px;
+    top: 22px
+  }
 }
 
 @media only screen and (min-width: 901px) {
   .back-button {
-    display: none
+    top: 25px;
+    left: 30px
   }
 
   .title-bar-title {
