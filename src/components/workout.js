@@ -8,12 +8,14 @@ import './workout.css';
 
 class Workout extends Component {
   render() {
+    const exercises = this.props.exercises.map((exercise, index) => {
+      return <Exercise key={index} {...exercise}/>
+    })
+
     return (
       <div>
-        <p>Workout:</p>
-        <p>{this.props.data}</p>
-        <Exercise />
-        <Exercise />
+        <p>Workout: {this.props.name}</p>
+        <div>{exercises}</div>
         <Link to='/editworkout'><button className='edit-button'>Edit</button></Link>
       </div>
     );

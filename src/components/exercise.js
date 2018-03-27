@@ -6,9 +6,13 @@ import ExerciseDataRepetitions from './exercise-data-repetitions';
 
 class Exercise extends Component {
   render() {
+    const sets = this.props.sets.map((set, index) => {
+      return <ExerciseDataSet key={index} {...set}/>
+    })
+
     return (
       <div>
-        <h5>Exercise: </h5>
+        <h5>Exercise: {this.props.name}</h5>
         <table>
           <thead>
             <tr>
@@ -18,16 +22,7 @@ class Exercise extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <ExerciseDataSet />
-              <ExerciseDataWeight />
-              <ExerciseDataRepetitions />
-            </tr>
-            <tr>
-              <ExerciseDataSet />
-              <ExerciseDataWeight />
-              <ExerciseDataRepetitions />
-            </tr>
+            {sets}
           </tbody>
         </table>
       </div>

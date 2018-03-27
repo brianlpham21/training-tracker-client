@@ -11,13 +11,20 @@ class MiniWorkoutLog extends Component {
   }
 
   render() {
-    console.log(this.props.workout);
+    let workouts = '';
+
+    if (this.props.workout[0]) {
+      if (this.props.workout[0].user) {
+        workouts = this.props.workout.map((workout, index) => {
+          return <Workout key={index} {...workout}/>
+        })
+      }
+    }
 
     return (
       <div>
         <h4>Recent Workouts</h4>
-        <p>{this.props.workout}</p>
-        <Workout data={this.props.workout}/>
+        <div>{workouts}</div>
       </div>
     );
   }
