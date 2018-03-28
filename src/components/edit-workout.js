@@ -14,6 +14,27 @@ class EditWorkout extends Component {
     this.props.dispatch(fetchSelectWorkoutData(window.location.pathname.split('/')[2]));
   }
 
+  onSubmit(event) {
+    console.log('hi');
+  }
+
+  editWorkoutName(event) {
+    event.preventDefault();
+
+    const workoutInput = document.getElementsByClassName('workout-name')[0];
+
+    workoutInput.outerHTML = `
+      <form class='edit-workout-name'>
+        <input type="text" id="edit-workout-name" placeholder="Workout Name" value="${workoutInput.innerHTML}" size="50" autofocus>
+        <button type="submit" class='edit-workout-name-form-submit'>Submit</button>
+        <button class='edit-workout-name-form-cancel'>Cancel</button>
+      </form>
+    `;
+
+    let editWorkoutNameButton = document.getElementsByClassName('edit-workout-name-button')[0];
+    editWorkoutNameButton.style.display = 'none';
+  }
+
   render() {
     let exercises = '';
 
@@ -27,8 +48,10 @@ class EditWorkout extends Component {
 
     return (
       <div className='edit-section'>
-        <h3>{this.props.select_workout_data.name}</h3>
+        <h3 className='workout-name'>{this.props.select_workout_data.name}</h3>
+        <button className='edit-workout-name-button' onClick= {(event) => this.editWorkoutName(event)}>Edit Workout Name</button>
         <div>{exercises}</div>
+        <button className='add-exercise-button'>Add Exercise</button>
         <button className='edit-submit-button'>Submit</button>
         <Link to='/dashboard'><button className='edit-cancel-button'>Cancel</button></Link>
       </div>

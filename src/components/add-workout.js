@@ -9,8 +9,10 @@ class AddWorkout extends Component {
   onAddWorkout(event) {
     event.preventDefault();
 
-    this.props.dispatch(addWorkout(event.target.workoutName.value))
-      .then(data => window.location.replace(`editworkout/${data.addWorkoutData.workout_id}`));
+    if (event.target.workoutName.value) {
+      this.props.dispatch(addWorkout(event.target.workoutName.value))
+        .then(data => window.location.replace(`editworkout/${data.addWorkoutData.workout_id}`));
+    }
   }
 
   render() {
