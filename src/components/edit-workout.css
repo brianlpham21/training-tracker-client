@@ -25,6 +25,11 @@
   margin-right: 10px
 }
 
+.add-exercise-button {
+  display: block;
+  margin: 20px 0;
+}
+
 .edit-workout-name-button:hover, .edit-submit-button:hover, .edit-cancel-button:hover, .add-exercise-button:hover, .edit-workout-name-form-submit:hover, .edit-workout-name-form-cancel:hover {
   background-color: rgba(255, 215, 0, 0.8);
   cursor: pointer
