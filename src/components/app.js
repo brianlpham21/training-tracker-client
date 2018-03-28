@@ -55,7 +55,7 @@ export class App extends React.Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/dashboard/workoutlog" component={WorkoutLog} />
-          <Route exact path="/editworkout" component={EditWorkout} />
+          <Route exact path="/editworkout/:workout_id" component={EditWorkout} />
         </div>
         <Footer />
       </div>

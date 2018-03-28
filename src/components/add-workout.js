@@ -1,32 +1,30 @@
 import React, { Component } from 'react';
-import {Field, reduxForm, focus} from 'redux-form';
-
-import Input from './input';
+import {connect} from 'react-redux';
+import requiresLogin from './requires-login';
+import {addWorkout} from '../actions/protected-data';
 
 import './add-workout.css';
 
 class AddWorkout extends Component {
-  render() {
-    // onSubmit(value) {
-    //   const {workoutName} = value;
-    //   const workout = {workoutName};
-    //   return this.props
-    //     .dispatch(addWorkout(workout))
-    // }
+  onAddWorkout(event) {
+    event.preventDefault();
 
+    this.props.dispatch(addWorkout(event.target.workoutName.value))
+      .then(data => window.location.replace(`editworkout/${data.addWorkoutData.workout_id}`));
+  }
+
+  render() {
     return (
       <form
         className="add-workout"
-        // onSubmit={this.props.handleSubmit(value =>
-        //   this.onSubmit(value)
-        // )}
+        onSubmit= {(event) => this.onAddWorkout(event)}
         >
         <label htmlFor="workoutName">Workout Name:</label>
-        <Field component={Input} type="text" name="workoutName" />
+        <input type="text" name="workoutName" />
         <button
           type="submit"
           className="add-workout-button"
-          disabled={this.props.pristine || this.props.submitting}>
+          >
           Start Workout
         </button>
       </form>
@@ -34,8 +32,4 @@ class AddWorkout extends Component {
   }
 }
 
-export default reduxForm({
-  form: 'add-workout',
-  onSubmitFail: (errors, dispatch) =>
-    dispatch(focus('add-workout', Object.keys(errors)[0]))
-})(AddWorkout);
+export default requiresLogin()(connect()(AddWorkout));

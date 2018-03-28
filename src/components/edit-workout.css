@@ -2,6 +2,21 @@
   padding: 10px 20px
 }
 
+.edit-submit-button, .edit-cancel-button {
+  border: 2px solid grey;
+  border-radius: 10px;
+  color: black;
+  font-size: 14px;
+  margin-right: 4px;
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+
+.edit-submit-button:hover, .edit-cancel-button:hover {
+  background-color: rgba(255, 215, 0, 0.8);
+  cursor: pointer
+}
+
 @media only screen and (min-width: 581px) and (max-width: 900px) {
   .edit-section {
     padding: 35px 90px 35px 90px;

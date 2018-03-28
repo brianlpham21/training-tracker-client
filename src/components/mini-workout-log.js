@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchProtectedData} from '../actions/protected-data';
+import {fetchRecentWorkoutData} from '../actions/protected-data';
 
 import Workout from './workout';
 
 class MiniWorkoutLog extends Component {
   componentDidMount() {
-    this.props.dispatch(fetchProtectedData());
+    this.props.dispatch(fetchRecentWorkoutData());
   }
 
   render() {
     let workouts = '';
 
-    if (this.props.workout[0]) {
-      if (this.props.workout[0].user) {
-        workouts = this.props.workout.map((workout, index) => {
+    if (this.props.recent_workout_data[0]) {
+      if (this.props.recent_workout_data[0].user) {
+        workouts = this.props.recent_workout_data.map((workout, index) => {
           return <Workout key={index} {...workout}/>
         })
       }
@@ -32,7 +32,7 @@ class MiniWorkoutLog extends Component {
 
 const mapStateToProps = state => {
   return {
-    workout: state.protectedData.data
+    recent_workout_data: state.protectedData.recentWorkoutData
   };
 };
 

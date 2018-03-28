@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchProtectedData} from '../actions/protected-data';
+import {fetchWorkoutData} from '../actions/protected-data';
 
 import Workout from './workout';
 
@@ -10,20 +10,20 @@ import './workout-log.css';
 
 class WorkoutLog extends Component {
   componentDidMount() {
-    this.props.dispatch(fetchProtectedData());
+    this.props.dispatch(fetchWorkoutData());
   }
 
   render() {
     let workouts = '';
 
-    if (this.props.workout[0]) {
-      if (this.props.workout[0].user) {
-        workouts = this.props.workout.map((workout, index) => {
+    if (this.props.workout_data[0]) {
+      if (this.props.workout_data[0].user) {
+        workouts = this.props.workout_data.map((workout, index) => {
           return <Workout key={index} {...workout}/>
         })
       }
     }
-    
+
     return (
       <div className='workout-log'>
         <h3>Workouts</h3>
@@ -35,7 +35,7 @@ class WorkoutLog extends Component {
 
 const mapStateToProps = state => {
   return {
-    workout: state.protectedData.data
+    workout_data: state.protectedData.workoutData
   };
 };
 
