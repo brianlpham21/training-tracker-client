@@ -12,8 +12,6 @@ import {Link} from 'react-router-dom';
 
 import './edit-workout.css';
 
-
-
 const withIsEditing = withState("isEditing", "setIsEditing", false);
 
 const EditableField = compose(withIsEditing)(props => {
@@ -48,12 +46,11 @@ const EditableFieldEditor = reduxForm()(props => (
       component="input"
       placeholder={props.initial.inlineField.value}
       value="test"
+      onChange
       autoFocus
     />
   </form>
 ));
-
-
 
 class EditWorkoutWorking extends Component {
   componentDidMount() {
@@ -94,8 +91,7 @@ class EditWorkoutWorking extends Component {
         <EditableField value={this.props.select_workout_data.name} id="workoutName" />
         <div>{exercises}</div>
         <button className='add-exercise-button'>Add Exercise</button>
-        <button className='edit-submit-button'>Submit</button>
-        <Link to='/dashboard'><button className='edit-cancel-button'>Cancel</button></Link>
+        <Link to='/dashboard'><button className='edit-done-button'>Done</button></Link>
       </div>
     );
   }
