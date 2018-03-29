@@ -31,6 +31,10 @@
   .dashboard {
     margin: auto;
     max-width: 800px;
-    padding: 40px 90px 60px 90px;
+    padding: 40px 90px 40px 90px;
+  }
+
+  .workout-log-button {
+    margin-top: 35px
   }
 }

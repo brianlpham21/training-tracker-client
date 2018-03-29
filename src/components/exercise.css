@@ -1,0 +1,9 @@
+.indvidual-exercise-title {
+  margin: 15px 0 5px 0;
+  text-decoration: underline;
+}
+
+.indvidual-exercise-data-header * {
+  font-size: 14px;
+  font-weight: 550
+}

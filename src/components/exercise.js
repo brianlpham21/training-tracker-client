@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import ExerciseDataSet from './exercise-data-set';
 
+import './exercise.css';
+
 class Exercise extends Component {
   render() {
     const sets = this.props.sets.map((set, index) => {
@@ -10,11 +12,11 @@ class Exercise extends Component {
 
     if (sets.length > 0) {
       return (
-        <div>
-          <h5>Exercise: {this.props.name}</h5>
+        <div className='indvidual-exercise'>
+          <h4 className='indvidual-exercise-title'>Exercise: {this.props.name}</h4>
           <table>
             <thead>
-              <tr>
+              <tr className='indvidual-exercise-data-header'>
                 <th>Set</th>
                 <th>Weight</th>
                 <th>Repetitions</th>
@@ -29,8 +31,17 @@ class Exercise extends Component {
     }
     else {
       return (
-        <div>
-          <h5>Exercise: {this.props.name}</h5>
+        <div className='indvidual-exercise'>
+          <h4 className='indvidual-exercise-title'>Exercise: {this.props.name}</h4>
+          <table>
+            <thead>
+              <tr className='indvidual-exercise-data-header'>
+                <th>-</th>
+                <th>-</th>
+                <th>-</th>
+              </tr>
+            </thead>
+          </table>
         </div>
       );
     }

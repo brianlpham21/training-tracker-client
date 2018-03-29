@@ -5,6 +5,8 @@ import {fetchRecentWorkoutData} from '../actions/protected-data';
 
 import Workout from './workout';
 
+import './mini-workout-log.css';
+
 class MiniWorkoutLog extends Component {
   componentDidMount() {
     this.props.dispatch(fetchRecentWorkoutData());
@@ -22,8 +24,8 @@ class MiniWorkoutLog extends Component {
     }
 
     return (
-      <div>
-        <h4>Recent Workouts</h4>
+      <div className='mini-workout-log'>
+        <h1 className='mini-workout-log-title'>Recent Workouts</h1>
         <div>{workouts}</div>
       </div>
     );

@@ -2,7 +2,7 @@
   padding: 10px 20px
 }
 
-.edit-workout-name-button, .edit-submit-button, .edit-cancel-button, .add-exercise-button, .edit-workout-name-form-submit, .edit-workout-name-form-cancel {
+.edit-workout-name-button, .edit-done-button, .add-exercise-button, .edit-workout-name-form-submit, .edit-workout-name-form-cancel {
   border: 2px solid grey;
   border-radius: 10px;
   color: black;
@@ -30,7 +30,7 @@
   margin: 20px 0;
 }
 
-.edit-workout-name-button:hover, .edit-submit-button:hover, .edit-cancel-button:hover, .add-exercise-button:hover, .edit-workout-name-form-submit:hover, .edit-workout-name-form-cancel:hover {
+.edit-workout-name-button:hover, .edit-done-button:hover, .add-exercise-button:hover, .edit-workout-name-form-submit:hover, .edit-workout-name-form-cancel:hover {
   background-color: rgba(255, 215, 0, 0.8);
   cursor: pointer
 }

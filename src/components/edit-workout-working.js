@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchSelectWorkoutData} from '../actions/protected-data';
+import { compose, withState } from "recompose";
+import { Field, reduxForm, reducer } from "redux-form";
+import { combineReducers, createStore, applyMiddleware } from "redux";
 
 import Exercise from './exercise';
 
@@ -9,7 +12,50 @@ import {Link} from 'react-router-dom';
 
 import './edit-workout.css';
 
-class EditWorkout extends Component {
+
+
+const withIsEditing = withState("isEditing", "setIsEditing", false);
+
+const EditableField = compose(withIsEditing)(props => {
+  const {id, isEditing, setIsEditing, value} = props;
+
+  if (!isEditing) {
+    return (
+      <div>
+        <div>Workout Name: {value}</div>
+        <button onClick={() => setIsEditing(true)}>Edit</button>
+      </div>
+    );
+  }
+
+  if (isEditing) {
+    const formProps = {
+      form: `editable-field-${id}`,
+      onSubmit: () => setIsEditing(false),
+      initial: {
+        inlineField: {value}
+      }
+    };
+
+    return <EditableFieldEditor {...formProps} />;
+  }
+});
+
+const EditableFieldEditor = reduxForm()(props => (
+  <form onSubmit={props.submit}>
+    <Field
+      name="inlineField"
+      component="input"
+      placeholder={props.initial.inlineField.value}
+      value="test"
+      autoFocus
+    />
+  </form>
+));
+
+
+
+class EditWorkoutWorking extends Component {
   componentDidMount() {
     this.props.dispatch(fetchSelectWorkoutData(window.location.pathname.split('/')[2]));
   }
@@ -20,7 +66,7 @@ class EditWorkout extends Component {
     const workoutInput = document.getElementsByClassName('workout-name')[0];
 
     workoutInput.outerHTML = `
-      <form class='edit-workout-name'>
+      <form class='edit-workout-name' >
         <input type="text" id="edit-workout-name" placeholder="Workout Name" value="${workoutInput.innerHTML}" size="50" autofocus>
         <button type="submit" class='edit-workout-name-form-submit'>Submit</button>
         <button class='edit-workout-name-form-cancel'>Cancel</button>
@@ -32,7 +78,6 @@ class EditWorkout extends Component {
   }
 
   render() {
-
     let exercises = '';
 
     if (this.props.select_workout_data) {
@@ -46,10 +91,11 @@ class EditWorkout extends Component {
     return (
       <div className='edit-section'>
         <h3 className='workout-name'>{this.props.select_workout_data.name}</h3>
-        <button className='edit-workout-name-button' onClick= {(event) => this.editWorkoutName(event)}>Edit Workout Name</button>
+        <EditableField value={this.props.select_workout_data.name} id="workoutName" />
         <div>{exercises}</div>
         <button className='add-exercise-button'>Add Exercise</button>
-        <Link to='/dashboard'><button className='edit-done-button'>Done</button></Link>
+        <button className='edit-submit-button'>Submit</button>
+        <Link to='/dashboard'><button className='edit-cancel-button'>Cancel</button></Link>
       </div>
     );
   }
@@ -61,4 +107,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default requiresLogin()(connect(mapStateToProps)(EditWorkout));
+export default requiresLogin()(connect(mapStateToProps)(EditWorkoutWorking));

@@ -26,7 +26,7 @@ class WorkoutLog extends Component {
 
     return (
       <div className='workout-log'>
-        <h3>Workouts</h3>
+        <h1 className='workout-log-title'>Workouts</h1>
         <div>{workouts}</div>
       </div>
     );

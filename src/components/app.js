@@ -9,7 +9,7 @@ import RegistrationPage from './registration-page';
 import About from './about';
 import Dashboard from './dashboard';
 import WorkoutLog from './workout-log';
-import EditWorkout from './edit-workout';
+import EditWorkoutWorking from './edit-workout';
 import Footer from './footer';
 
 import {refreshAuthToken} from '../actions/auth';
@@ -55,7 +55,7 @@ export class App extends React.Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/dashboard/workoutlog" component={WorkoutLog} />
-          <Route exact path="/editworkout/:workout_id" component={EditWorkout} />
+          <Route exact path="/editworkout/:workout_id" component={EditWorkoutWorking} />
         </div>
         <Footer />
       </div>
