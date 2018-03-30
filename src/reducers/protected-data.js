@@ -4,6 +4,11 @@ import {
     FETCH_RECENT_WORKOUT_DATA_SUCCESS,
     FETCH_SELECT_WORKOUT_DATA_SUCCESS,
     ADD_WORKOUT_SUCCESS,
+    ADD_EXERCISE_SUCCESS,
+    ADD_SET_SUCCESS,
+    DELETE_WORKOUT_DATA_SUCCESS,
+    DELETE_EXERCISE_DATA_SUCCESS,
+    DELETE_SET_DATA_SUCCESS,
     FETCH_PROTECTED_DATA_ERROR,
 } from '../actions/protected-data';
 
@@ -12,6 +17,9 @@ const initialState = {
     workoutData: '',
     recentWorkoutData: '',
     selectWorkoutData: '',
+    addWorkoutData: '',
+    addExerciseData: '',
+    addSetData: '',
     error: null
 };
 
@@ -40,6 +48,28 @@ export default function reducer(state = initialState, action) {
         return Object.assign({}, state, {
             addWorkoutData: action.addWorkoutData,
             error: null
+        });
+    } else if (action.type === ADD_EXERCISE_SUCCESS) {
+        return Object.assign({}, state, {
+            addExerciseData: action.addExerciseData,
+            error: null
+        });
+    } else if (action.type === ADD_SET_SUCCESS) {
+        return Object.assign({}, state, {
+            addSetData: action.addSetData,
+            error: null
+        });
+    } else if (action.type === DELETE_WORKOUT_DATA_SUCCESS) {
+        return Object.assign({}, state, {
+            error: action.error
+        });
+    } else if (action.type === DELETE_EXERCISE_DATA_SUCCESS) {
+        return Object.assign({}, state, {
+            error: action.error
+        });
+    } else if (action.type === DELETE_SET_DATA_SUCCESS) {
+        return Object.assign({}, state, {
+            error: action.error
         });
     } else if (action.type === FETCH_PROTECTED_DATA_ERROR) {
         return Object.assign({}, state, {

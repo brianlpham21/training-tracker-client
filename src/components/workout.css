@@ -28,5 +28,6 @@ hr {
   background-color: 'silver';
   color: 'silver';
   height: 1;
-  margin: 15px 0
+  margin: 15px 0;
+  width: 500px
 }
