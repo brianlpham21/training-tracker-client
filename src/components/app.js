@@ -9,7 +9,7 @@ import RegistrationPage from './registration-page';
 import About from './about';
 import Dashboard from './dashboard';
 import WorkoutLog from './workout-log';
-import EditWorkoutWorking from './edit-workout-working';
+import EditWorkoutWorking from './edit-workout';
 import Footer from './footer';
 
 import {refreshAuthToken} from '../actions/auth';
