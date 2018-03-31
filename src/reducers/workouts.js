@@ -3,6 +3,7 @@ import {
     FETCH_RECENT_WORKOUT_DATA_SUCCESS,
     FETCH_SELECT_WORKOUT_DATA_SUCCESS,
     ADD_WORKOUT_SUCCESS,
+    EDIT_WORKOUT_SUCCESS,
     DELETE_WORKOUT_DATA_SUCCESS,
     WORKOUT_ERROR,
 } from '../actions/workouts';
@@ -34,6 +35,11 @@ export default function reducer(state = initialState, action) {
     } else if (action.type === ADD_WORKOUT_SUCCESS) {
         return Object.assign({}, state, {
             addWorkoutData: action.addWorkoutData,
+            error: null
+        });
+    } else if (action.type === EDIT_WORKOUT_SUCCESS) {
+        return Object.assign({}, state, {
+            editWorkoutData: action.editWorkoutData,
             error: null
         });
     } else if (action.type === DELETE_WORKOUT_DATA_SUCCESS) {

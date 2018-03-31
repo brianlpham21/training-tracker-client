@@ -21,8 +21,7 @@ class AddWorkout extends Component {
         className="add-workout"
         onSubmit= {(event) => this.onAddWorkout(event)}
         >
-        <label htmlFor="workoutName">Workout Name:</label>
-        <input type="text" name="workoutName" />
+        <input type="text" name="workoutName" placeholder='Enter Workout Name...'/>
         <button
           type="submit"
           className="add-workout-button"

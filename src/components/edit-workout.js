@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchSelectWorkoutData} from '../actions/workouts';
+import {editWorkout} from '../actions/workouts';
 import {addExercise} from '../actions/exercises';
 import {addSet} from '../actions/sets';
 import {deleteExercise} from '../actions/exercises';
@@ -14,8 +15,13 @@ import {Link} from 'react-router-dom';
 import './edit-workout.css';
 
 class EditWorkout extends Component {
+
   componentDidMount() {
     this.props.dispatch(fetchSelectWorkoutData(window.location.pathname.split('/')[2]));
+  }
+
+  onEditWorkout(event) {
+    this.props.dispatch(editWorkout(window.location.pathname.split('/')[2], event.target.value))
   }
 
   onAddExercise(event) {
@@ -56,31 +62,12 @@ class EditWorkout extends Component {
     }
   }
 
-  editWorkoutName(event) {
-    event.preventDefault();
-
-    const workoutInput = document.getElementsByClassName('workout-name')[0];
-
-    workoutInput.outerHTML = `
-      <form class='edit-workout-name'>
-        <input type='text' id='edit-workout-name' placeholder='Workout Name' value='${workoutInput.innerHTML}' size='50' autofocus>
-        <button type='submit' class='edit-workout-name-form-submit'>Submit</button>
-        <button class='edit-workout-name-form-cancel'>Cancel</button>
-      </form>
-    `;
-
-    let editWorkoutNameButton = document.getElementsByClassName('edit-workout-name-button')[0];
-    editWorkoutNameButton.style.display = 'none';
-  }
-
-
-
   render() {
     let exercises = '';
 
-    let delete_button = <button className='delete-exercise-button' onClick= {(event) => this.onDeleteExercise(event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-exercise-icon' /></button>;
+    const delete_button = <button className='delete-exercise-button' onClick= {(event) => this.onDeleteExercise(event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-exercise-icon' /></button>;
 
-    let set_delete_button = <button className='delete-set-button' onClick= {(event) => this.onDeleteSet(event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-set-icon' /></button>;
+    const set_delete_button = <button className='delete-set-button' onClick= {(event) => this.onDeleteSet(event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-set-icon' /></button>;
 
     if (this.props.select_workout_data) {
       if(this.props.select_workout_data.exercises) {
@@ -101,13 +88,15 @@ class EditWorkout extends Component {
 
     return (
       <div className='edit-section'>
-        <h3 className='workout-name'>{this.props.select_workout_data.name}</h3>
-        <button className='edit-workout-name-button' onClick= {(event) => this.editWorkoutName(event)}>Edit Workout Name</button>
+        <form className='edit-workout-name'>
+          <input type='text' id='edit-workout-name' placeholder='Workout Name' value={this.props.select_workout_data.name} size='30' onChange onBlur={(event) => this.onEditWorkout(event)} />
+        </form>
+
         <div>{exercises}</div>
         <hr />
-        <form className='add-exercise-form' onSubmit= {(event) => this.onAddExercise(event)}>
+        <form className='add-exercise-form' onSubmit={(event) => this.onAddExercise(event)}>
           <input type='text' name='exerciseName' placeholder='Exercise Name...' />
-          <button type='submit' className='add-exercise-button'>Add Exercise</button>
+          <button type='submit' className='add-exercise-button'><img src='https://d30y9cdsu7xlg0.cloudfront.net/png/74327-200.png' alt='add-icon' className='add-exercise-icon' /></button>
         </form>
         <Link to='/dashboard'><button className='edit-done-button'>Done</button></Link>
       </div>

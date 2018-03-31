@@ -11,6 +11,7 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
     if (action.type === ADD_EXERCISE_SUCCESS) {
+        console.log(action.addExerciseData);
         return Object.assign({}, state, {
             addExerciseData: action.addExerciseData,
             error: null

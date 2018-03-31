@@ -8,8 +8,13 @@
   padding: 5px 10px;
 }
 
-.edit-workout-button:hover, .delete-workout-button:hover {
+.edit-workout-button:hover {
   background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer
+}
+
+.delete-workout-button:hover {
+  background-color: rgba(225, 0, 0, 0.4);
   cursor: pointer
 }
 
@@ -30,4 +35,10 @@ hr {
   height: 1;
   margin: 15px 0;
   width: 500px
+}
+
+@media only screen and (max-width: 500px) {
+  hr {
+    width: 200px
+  }
 }

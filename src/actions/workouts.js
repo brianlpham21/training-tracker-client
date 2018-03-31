@@ -25,6 +25,12 @@ export const addWorkoutSuccess = addWorkoutData => ({
     addWorkoutData
 });
 
+export const EDIT_WORKOUT_SUCCESS = 'EDIT_WORKOUT_SUCCESS';
+export const editWorkoutSuccess = editWorkoutData => ({
+    type: EDIT_WORKOUT_SUCCESS,
+    editWorkoutData
+});
+
 export const DELETE_WORKOUT_DATA_SUCCESS = 'DELETE_WORKOUT_DATA_SUCCESS';
 export const deleteWorkoutDataSuccess = error => ({
     type: DELETE_WORKOUT_DATA_SUCCESS,
@@ -103,6 +109,26 @@ export const addWorkout = name => (dispatch, getState) => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then((data) => dispatch(addWorkoutSuccess(data)))
+        .catch(err => {
+            dispatch(workoutError(err));
+        });
+};
+
+export const editWorkout = (workout_id, name) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
+    const url = `${API_BASE_URL}/workouts/` + workout_id;
+
+    return fetch(`${url}`, {
+        method: 'PATCH',
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+          'Content-Type': `application/json`
+        },
+        body: JSON.stringify({name: name})
+    })
+        .then(res => normalizeResponseErrors(res))
+        .then(res => res.json())
+        .then((data) => dispatch(editWorkoutSuccess(data)))
         .catch(err => {
             dispatch(workoutError(err));
         });
