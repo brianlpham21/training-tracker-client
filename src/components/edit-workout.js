@@ -8,7 +8,7 @@ import {addSet} from '../actions/sets';
 import {deleteExercise} from '../actions/exercises';
 import {deleteSet} from '../actions/sets';
 
-import Exercise from './exercise';
+import ExerciseEdit from './exercise-edit';
 
 import {Link} from 'react-router-dom';
 
@@ -22,6 +22,7 @@ class EditWorkout extends Component {
 
   onEditWorkout(event) {
     this.props.dispatch(editWorkout(window.location.pathname.split('/')[2], event.target.value))
+      .then(data => window.location.reload());
   }
 
   onAddExercise(event) {
@@ -63,21 +64,31 @@ class EditWorkout extends Component {
   }
 
   render() {
-    let exercises = '';
-
     const delete_button = <button className='delete-exercise-button' onClick= {(event) => this.onDeleteExercise(event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-exercise-icon' /></button>;
 
     const set_delete_button = <button className='delete-set-button' onClick= {(event) => this.onDeleteSet(event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-set-icon' /></button>;
+
+    let workoutForm = '';
+    let exercises ='';
+
+    if (this.props.select_workout_data) {
+      if (this.props.select_workout_data.name) {
+        workoutForm =
+          <form className='edit-workout-name'>
+            <input type='text' id='edit-workout-name' placeholder='Workout Name' defaultValue={this.props.select_workout_data.name} size='30' onBlur={(event) => this.onEditWorkout(event)} />
+          </form>
+      }
+    }
 
     if (this.props.select_workout_data) {
       if(this.props.select_workout_data.exercises) {
         exercises = this.props.select_workout_data.exercises.map((exercises, index) => {
           return (
             <div key={index}>
-              <Exercise {...exercises} button={delete_button} set_button={set_delete_button} />
+              <ExerciseEdit {...exercises} button={delete_button} set_button={set_delete_button} />
               <form className='add-set-form' id={exercises._id} onSubmit= {(event) => this.onAddSet(event)}>
-                <input type='number' name='setWeight' placeholder='Set Weight...' />
-                <input type='number' name='setRepetitions' placeholder='Set Repetitions...' />
+                <input type='number' name='setWeight' placeholder='Set Weight...' min='0' />
+                <input type='number' name='setRepetitions' placeholder='Set Repetitions...' min='0' />
                 <button type='submit' className='add-set-button'><img src='https://d30y9cdsu7xlg0.cloudfront.net/png/74327-200.png' alt='add-icon' className='add-set-icon' /></button>
               </form>
             </div>
@@ -88,10 +99,8 @@ class EditWorkout extends Component {
 
     return (
       <div className='edit-section'>
-        <form className='edit-workout-name'>
-          <input type='text' id='edit-workout-name' placeholder='Workout Name' value={this.props.select_workout_data.name} size='30' onChange onBlur={(event) => this.onEditWorkout(event)} />
-        </form>
-
+        <p className='instructions-text'><span className='instructions-title'>Instructions:</span> Use the + icons to add sets and exercises to your workout. You can use the edit icons to edit the workout name, exercise names, and data for weight and repetitions. If you like, you may also delete the exercises or sets using the delete icon.</p>
+        <div>{workoutForm}</div>
         <div>{exercises}</div>
         <hr />
         <form className='add-exercise-form' onSubmit={(event) => this.onAddExercise(event)}>

@@ -8,3 +8,7 @@
   font-size: 14px;
   font-weight: 550
 }
+
+.edit-exercise-name {
+  display: inline-block;
+}

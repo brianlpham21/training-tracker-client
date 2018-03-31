@@ -17,6 +17,15 @@
   cursor: pointer;
 }
 
+.start-title {
+  font-weight: bold
+}
+
+.start-text {
+  padding: 0 25px 10px 25px;
+  line-height: 22px
+}
+
 @media only screen and (max-width: 420px) {
 
 }
