@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchSelectWorkoutData} from '../actions/protected-data';
-import {addExercise} from '../actions/protected-data';
-import {addSet} from '../actions/protected-data';
-import {deleteExercise} from '../actions/protected-data';
-import {deleteSet} from '../actions/protected-data';
+import {fetchSelectWorkoutData} from '../actions/workouts';
+import {addExercise} from '../actions/exercises';
+import {addSet} from '../actions/sets';
+import {deleteExercise} from '../actions/exercises';
+import {deleteSet} from '../actions/sets';
 
 import Exercise from './exercise';
 
@@ -41,7 +41,7 @@ class EditWorkout extends Component {
 
     const result = window.confirm('Are you sure?')
     if (result) {
-      this.props.dispatch(deleteExercise(window.location.pathname.split('/')[2], event.target.parentElement.nextSibling.id))
+      this.props.dispatch(deleteExercise(window.location.pathname.split('/')[2], event.target.parentElement.parentElement.nextSibling.id))
         .then(data => window.location.reload());
     }
   }
@@ -51,7 +51,7 @@ class EditWorkout extends Component {
 
     const result = window.confirm('Are you sure?')
     if (result) {
-      this.props.dispatch(deleteSet(window.location.pathname.split('/')[2], event.target.parentElement.parentElement.parentElement.parentElement.previousSibling.parentElement.nextSibling.id, event.target.parentElement.parentElement.id))
+      this.props.dispatch(deleteSet(window.location.pathname.split('/')[2], event.target.parentElement.parentElement.parentElement.parentElement.parentElement.previousSibling.parentElement.nextSibling.id, event.target.parentElement.parentElement.parentElement.id))
         .then(data => window.location.reload());
     }
   }
@@ -76,12 +76,11 @@ class EditWorkout extends Component {
 
 
   render() {
-
     let exercises = '';
 
-    let delete_button = <button className='delete-exercise-button' onClick= {(event) => this.onDeleteExercise(event)}>Delete Exercise</button>;
+    let delete_button = <button className='delete-exercise-button' onClick= {(event) => this.onDeleteExercise(event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-exercise-icon' /></button>;
 
-    let set_delete_button = <button className='delete-set-button' onClick= {(event) => this.onDeleteSet(event)}>Delete Set</button>;
+    let set_delete_button = <button className='delete-set-button' onClick= {(event) => this.onDeleteSet(event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-set-icon' /></button>;
 
     if (this.props.select_workout_data) {
       if(this.props.select_workout_data.exercises) {
@@ -92,7 +91,7 @@ class EditWorkout extends Component {
               <form className='add-set-form' id={exercises._id} onSubmit= {(event) => this.onAddSet(event)}>
                 <input type='number' name='setWeight' placeholder='Set Weight...' />
                 <input type='number' name='setRepetitions' placeholder='Set Repetitions...' />
-                <button type='submit' className='add-set-button'>Add Set</button>
+                <button type='submit' className='add-set-button'><img src='https://d30y9cdsu7xlg0.cloudfront.net/png/74327-200.png' alt='add-icon' className='add-set-icon' /></button>
               </form>
             </div>
           )
@@ -118,7 +117,7 @@ class EditWorkout extends Component {
 
 const mapStateToProps = state => {
   return {
-    select_workout_data: state.protectedData.selectWorkoutData,
+    select_workout_data: state.workouts.selectWorkoutData,
   };
 };
 

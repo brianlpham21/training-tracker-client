@@ -52,6 +52,4 @@ class Exercise extends Component {
   }
 }
 
-// export default Exercise;
-
 export default requiresLogin()(connect()(Exercise));

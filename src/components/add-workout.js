@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {addWorkout} from '../actions/protected-data';
+import {addWorkout} from '../actions/workouts';
 
 import './add-workout.css';
 

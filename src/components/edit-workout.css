@@ -25,6 +25,14 @@
   margin-right: 10px
 }
 
+.delete-exercise-icon, .delete-set-icon {
+  height: 12px
+}
+
+.add-set-icon {
+  height: 11px
+}
+
 .add-exercise-button {
   margin-left: 5px;
 }
@@ -36,15 +44,17 @@
 
 .delete-set-button {
   font-size: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 4px;
+  margin-top: 0
 }
 
-.delete-exercise-button {
+.delete-exercise-button, .delete-set-button {
   display: inline-block;
   font-size: 10px;
-  border-radius: 5px;
-  padding: 4px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  padding: 3px 3px 1px 3px;
   margin-left: 10px
 }
 
@@ -90,6 +100,16 @@
   border-radius: 5px;
   padding: 4px;
   margin-left: 4px
+}
+
+.add-set-button {
+  display: inline-block;
+  font-size: 10px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  padding: 2px 0 0 0;
+  margin-left: 4px;
+  vertical-align: middle;
 }
 
 @media only screen and (min-width: 581px) and (max-width: 900px) {

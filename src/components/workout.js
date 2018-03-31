@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {deleteWorkout} from '../actions/protected-data';
+import {deleteWorkout} from '../actions/workouts';
 
 import Exercise from './exercise';
 
@@ -44,7 +44,5 @@ class Workout extends Component {
     );
   }
 }
-
-// export default Workout;
 
 export default requiresLogin()(connect()(Workout));

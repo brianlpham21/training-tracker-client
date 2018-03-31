@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchWorkoutData} from '../actions/protected-data';
+import {fetchWorkoutData} from '../actions/workouts';
 
 import Workout from './workout';
 
@@ -35,7 +35,7 @@ class WorkoutLog extends Component {
 
 const mapStateToProps = state => {
   return {
-    workout_data: state.protectedData.workoutData
+    workout_data: state.workouts.workoutData
   };
 };
 

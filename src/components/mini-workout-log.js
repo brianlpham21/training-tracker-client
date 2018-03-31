@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchRecentWorkoutData} from '../actions/protected-data';
+import {fetchRecentWorkoutData} from '../actions/workouts';
 
 import Workout from './workout';
 
@@ -34,7 +34,7 @@ class MiniWorkoutLog extends Component {
 
 const mapStateToProps = state => {
   return {
-    recent_workout_data: state.protectedData.recentWorkoutData
+    recent_workout_data: state.workouts.recentWorkoutData
   };
 };
 

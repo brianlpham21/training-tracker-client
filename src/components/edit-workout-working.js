@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchSelectWorkoutData} from '../actions/protected-data';
+import {fetchSelectWorkoutData} from '../actions/workouts';
 import { compose, withState } from "recompose";
-import { Field, reduxForm, reducer } from "redux-form";
-import { combineReducers, createStore, applyMiddleware } from "redux";
+import { Field, reduxForm } from "redux-form";
 
 import Exercise from './exercise';
 
@@ -46,7 +45,6 @@ const EditableFieldEditor = reduxForm()(props => (
       component="input"
       placeholder={props.initial.inlineField.value}
       value="test"
-      onChange
       autoFocus
     />
   </form>
@@ -99,7 +97,7 @@ class EditWorkoutWorking extends Component {
 
 const mapStateToProps = state => {
   return {
-    select_workout_data: state.protectedData.selectWorkoutData,
+    select_workout_data: state.workouts.selectWorkoutData,
   };
 };
 
