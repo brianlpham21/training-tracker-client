@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 
+import {editExercise} from '../actions/exercises';
+
 import ExerciseDataSetEdit from './exercise-data-set-edit';
 
 import './exercise.css';
 
 class ExerciseEdit extends Component {
+  onEditExercise(event) {
+    this.props.dispatch(editExercise(window.location.pathname.split('/')[2], event.target.className, event.target.value))
+      .then(data => window.location.reload());
+  }
+
   render() {
     const sets = this.props.sets.map((set, index) => {
       return <ExerciseDataSetEdit key={index} setNumber={index} {...set} set_button={this.props.set_button} />
@@ -16,7 +23,7 @@ class ExerciseEdit extends Component {
       return (
         <div className='indvidual-exercise'>
           <form className='edit-exercise-name'>
-            <input type='text' id='edit-exercise-name' placeholder='Exercise Name' defaultValue={this.props.name} size='30' onBlur={(event) => console.log(event)} />
+            <input type='text' id='edit-exercise-name' placeholder='Exercise Name' className={this.props._id} defaultValue={this.props.name} size='30' onBlur={(event) => this.onEditExercise(event)} />
           </form>
           {this.props.button}
           <table>
@@ -38,7 +45,7 @@ class ExerciseEdit extends Component {
       return (
         <div className='indvidual-exercise'>
           <form className='edit-exercise-name'>
-            <input type='text' id='edit-exercise-name' placeholder='Exercise Name' defaultValue={this.props.name} size='30' onBlur={(event) => console.log(event)} />
+            <input type='text' id='edit-exercise-name' placeholder='Exercise Name' defaultValue={this.props.name} size='30' onBlur={(event) => this.onEditExercise(event)} />
           </form>
           {this.props.button}
           <table>

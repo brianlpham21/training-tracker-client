@@ -4,7 +4,26 @@
 
 .workout-log-title {
   margin-bottom: 0;
-  color: #cca300
+  color: black
+}
+
+.workout-back-button {
+  float: right;
+  vertical-align: middle;
+  position: relative;
+  top: -40px;
+  right: 100px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 8px;
+  color: black;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.workout-back-button:hover {
+  background-color: silver;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 581px) and (max-width: 900px) {

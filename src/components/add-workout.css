@@ -6,12 +6,20 @@ form * {
   border: 2px solid grey;
   border-radius: 10px;
   color: black;
-  font-size: 14px;
-  margin-top: 10px;
-  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 70px;
+  margin: 12px auto 10px auto
 }
 
 .add-workout-button:hover {
-  background-color: rgba(255, 215, 0, 0.8);
+  background-color: rgba(66, 134, 244, 0.4);
   cursor: pointer;
+}
+
+.add-workout-input {
+  font-size: 25px;
+  width: 400px;
+  margin: auto;
+  padding: 6px 20px
 }

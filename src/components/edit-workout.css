@@ -37,8 +37,13 @@
   margin-left: 5px;
 }
 
-.edit-workout-name-button:hover, .edit-done-button:hover, .add-exercise-button:hover, .edit-workout-name-form-submit:hover, .edit-workout-name-form-cancel:hover, .add-set-button:hover, .delete-exercise-button:hover, .delete-set-button:hover {
+.edit-workout-name-button:hover, .add-exercise-button:hover, .edit-workout-name-form-submit:hover, .edit-workout-name-form-cancel:hover, .add-set-button:hover, .delete-exercise-button:hover, .delete-set-button:hover {
   background-color: rgba(255, 215, 0, 0.8);
+  cursor: pointer
+}
+
+.edit-done-button:hover {
+  background-color: rgba(60,179,113, 0.3);
   cursor: pointer
 }
 
@@ -126,8 +131,9 @@
 }
 
 .instructions-text {
-  padding: 0 25px 10px 25px;
-  line-height: 22px
+  padding: 0 0 10px 0;
+  line-height: 26px;
+  font-size: 16px
 }
 
 @media only screen and (min-width: 581px) and (max-width: 900px) {

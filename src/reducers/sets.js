@@ -1,11 +1,13 @@
 import {
     ADD_SET_SUCCESS,
+    EDIT_SET_DATA_SUCCESS,
     DELETE_SET_DATA_SUCCESS,
     SET_ERROR,
 } from '../actions/sets';
 
 const initialState = {
     addSetData: '',
+    editSetData: '',
     error: null
 };
 
@@ -14,6 +16,11 @@ export default function reducer(state = initialState, action) {
         return Object.assign({}, state, {
             addSetData: action.addSetData,
             error: null
+        });
+    } else if (action.type === EDIT_SET_DATA_SUCCESS) {
+        return Object.assign({}, state, {
+            editSetData: action.editSetData,
+            error: action.error
         });
     } else if (action.type === DELETE_SET_DATA_SUCCESS) {
         return Object.assign({}, state, {

@@ -7,6 +7,12 @@ export const addSetSuccess = addSetData => ({
     addSetData
 });
 
+export const EDIT_SET_DATA_SUCCESS = 'EDIT_SET_DATA_SUCCESS';
+export const editSetDataSuccess = editSetData => ({
+    type: EDIT_SET_DATA_SUCCESS,
+    editSetData
+});
+
 export const DELETE_SET_DATA_SUCCESS = 'DELETE_SET_DATA_SUCCESS';
 export const deleteSetDataSuccess = error => ({
     type: DELETE_SET_DATA_SUCCESS,
@@ -34,6 +40,46 @@ export const addSet = (workout_id, exercise_id, weight, repetitions) => (dispatc
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then((data) => dispatch(addSetSuccess(data)))
+        .catch(err => {
+            dispatch(setError(err));
+        });
+};
+
+export const editSetWeight = (workout_id, exercise_id, set_id, weight) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
+    const url = `${API_BASE_URL}/workouts/` + workout_id + `/exercises/` + exercise_id + `/sets/` + set_id;
+
+    return fetch(`${url}`, {
+        method: 'PATCH',
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+          'Content-Type': `application/json`
+        },
+        body: JSON.stringify({weight: weight})
+    })
+        .then(res => normalizeResponseErrors(res))
+        .then(res => res.json())
+        .then((data) => dispatch(editSetDataSuccess(data)))
+        .catch(err => {
+            dispatch(setError(err));
+        });
+};
+
+export const editSetRepetitions = (workout_id, exercise_id, set_id, repetitions) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
+    const url = `${API_BASE_URL}/workouts/` + workout_id + `/exercises/` + exercise_id + `/sets/` + set_id;
+
+    return fetch(`${url}`, {
+        method: 'PATCH',
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+          'Content-Type': `application/json`
+        },
+        body: JSON.stringify({repetitions: repetitions})
+    })
+        .then(res => normalizeResponseErrors(res))
+        .then(res => res.json())
+        .then((data) => dispatch(editSetDataSuccess(data)))
         .catch(err => {
             dispatch(setError(err));
         });
