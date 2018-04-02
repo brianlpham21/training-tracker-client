@@ -14,7 +14,7 @@ class Exercise extends Component {
 
     if (sets.length > 0) {
       return (
-        <div className='indvidual-exercise'>
+        <div className='individual-exercise'>
           <h4 className='indvidual-exercise-title'>Exercise: {this.props.name}</h4>
           {this.props.button}
           <table>
