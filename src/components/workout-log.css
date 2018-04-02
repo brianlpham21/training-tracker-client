@@ -26,9 +26,30 @@
   cursor: pointer;
 }
 
-@media only screen and (min-width: 581px) and (max-width: 900px) {
+@media only screen and (max-width: 499px) {
+  .workout-back-button {
+    right: 10px;
+    font-size: 10px
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 670px) {
   .workout-log {
     padding: 30px 90px 35px 90px;
+  }
+
+  .workout-back-button {
+    right: 20px
+  }
+}
+
+@media only screen and (min-width: 671px) and (max-width: 900px) {
+  .workout-log {
+    padding: 30px 90px 35px 90px;
+  }
+
+  .workout-back-button {
+    right: 40px
   }
 }
 

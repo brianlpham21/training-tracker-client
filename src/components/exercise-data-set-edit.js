@@ -5,7 +5,7 @@ import requiresLogin from './requires-login';
 import {editSetWeight} from '../actions/sets';
 import {editSetRepetitions} from '../actions/sets';
 
-import './exercise-data-set.css';
+import './exercise-data-set-edit.css';
 
 class ExerciseDataSetEdit extends Component {
   onEditSetWeight(event) {
@@ -20,7 +20,7 @@ class ExerciseDataSetEdit extends Component {
 
   render() {
     return (
-      <tr className='exercise-data' id={this.props._id}>
+      <tr className='exercise-data-edit' id={this.props._id}>
         <td>{this.props.setNumber + 1}</td>
         <td>
           <form className='edit-set-weight'>

@@ -16,3 +16,7 @@
 .edit-exercise-name {
   display: inline-block;
 }
+
+#edit-exercise-name {
+  width: 200px
+}
