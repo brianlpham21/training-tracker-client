@@ -6,8 +6,6 @@ import {fetchWorkoutData} from '../actions/workouts';
 
 import Workout from './workout';
 
-import {Link} from 'react-router-dom';
-
 import './workout-log.css';
 
 class WorkoutLog extends Component {
@@ -29,7 +27,6 @@ class WorkoutLog extends Component {
     return (
       <div className='workout-log'>
         <h1 className='workout-log-title'>Workouts</h1>
-        <Link to='/dashboard'><button className='workout-back-button'>back</button></Link>
         <div>{workouts}</div>
       </div>
     );

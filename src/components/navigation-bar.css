@@ -1,0 +1,63 @@
+nav {
+  background-color: #2b2c2d;
+  width: 100%;
+}
+
+#nav-container {
+  margin: auto;
+  max-width: 800px;
+}
+
+.header-bar-title {
+  font-family: 'Lobster', cursive;
+  font-size: 25px
+}
+
+#nav-container * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#nav-links {
+  float: right;
+}
+
+#nav-links * {
+  margin-left: 10px
+}
+
+.nav-home-link-component, .nav-about-link-component, .nav-workoutlog-link-component, .nav-logout-button {
+  text-decoration: none;
+  color: lightGrey;
+  position: relative;
+  top: 3px;
+  font-size: 16px
+}
+
+.nav-logout-button {
+  border: none;
+  background-color: #2b2c2d;
+  padding-left: 10px
+}
+
+.nav-logout-button:hover {
+  cursor: pointer
+}
+
+.header-bar-link-component {
+  text-decoration: none
+}
+
+.header-bar-title {
+  color: white;
+}
+
+.header-bar-title:hover {
+  text-shadow: 0 0 1px white;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 880px) {
+  #nav-container {
+    padding: 0 30px
+  }
+}
