@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {Route, withRouter} from 'react-router-dom';
 
 import NavigationBar from './navigation-bar';
-
 import LandingPage from './landing-page';
 import LoginPage from './login-page';
 import RegistrationPage from './registration-page';

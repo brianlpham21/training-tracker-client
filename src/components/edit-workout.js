@@ -16,9 +16,9 @@ import {Link} from 'react-router-dom';
 import './edit-workout.css';
 
 class EditWorkout extends Component {
-
   componentDidMount() {
     this.props.dispatch(fetchSelectWorkoutData(window.location.pathname.split('/')[2]));
+    document.getElementsByClassName('current')[0].classList.remove('current')
   }
 
   onEditWorkout(event) {

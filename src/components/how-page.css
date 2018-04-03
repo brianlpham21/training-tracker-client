@@ -1,0 +1,21 @@
+.how-page {
+  padding: 5px 30px 15px 30px
+}
+
+@media only screen and (min-width: 581px) and (max-width: 900px) {
+  .how-page {
+    padding: 0 90px 35px 90px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .how-page {
+    margin: 60px auto 0 auto;
+    max-width: 800px;
+    padding: 0 90px 45px 90px;
+  }
+
+  .how-page-text {
+    line-height: 30px
+  }
+}
