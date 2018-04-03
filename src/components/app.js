@@ -11,6 +11,7 @@ import About from './about';
 import Dashboard from './dashboard';
 import WorkoutLog from './workout-log';
 import EditWorkout from './edit-workout';
+import HowPage from './how-page';
 import Footer from './footer';
 
 import {refreshAuthToken} from '../actions/auth';
@@ -57,6 +58,7 @@ export class App extends React.Component {
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/dashboard/workoutlog" component={WorkoutLog} />
           <Route exact path="/editworkout/:workout_id" component={EditWorkout} />
+          <Route exact path="/how-it-works" component={HowPage} />
         </div>
         <Footer />
       </div>

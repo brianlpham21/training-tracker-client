@@ -26,7 +26,7 @@ nav {
   margin-left: 10px
 }
 
-.nav-home-link-component, .nav-about-link-component, .nav-workoutlog-link-component, .nav-logout-button {
+.nav-home-link-component, .nav-how-link-component, .nav-workoutlog-link-component, .nav-logout-button {
   text-decoration: none;
   color: lightGrey;
   position: relative;
@@ -54,6 +54,10 @@ nav {
 
 .header-bar-title:hover {
   text-shadow: 0 0 1px white;
+}
+
+.current {
+  color: gold
 }
 
 @media only screen and (min-width: 600px) and (max-width: 880px) {
