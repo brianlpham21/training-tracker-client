@@ -5,6 +5,7 @@ import {
     ADD_WORKOUT_SUCCESS,
     EDIT_WORKOUT_SUCCESS,
     DELETE_WORKOUT_DATA_SUCCESS,
+    CLEAR_WORKOUT_DATA,
     WORKOUT_ERROR,
 } from '../actions/workouts';
 
@@ -46,6 +47,10 @@ export default function reducer(state = initialState, action) {
         return Object.assign({}, state, {
             error: action.error
         });
+    } else if (action.type === CLEAR_WORKOUT_DATA) {
+        return Object.assign({}, state, {
+            selectWorkoutData: ''
+        })
     } else if (action.type === WORKOUT_ERROR) {
         return Object.assign({}, state, {
             error: action.error

@@ -9,13 +9,11 @@ import './exercise-data-set-edit.css';
 
 class ExerciseDataSetEdit extends Component {
   onEditSetWeight(event) {
-    this.props.dispatch(editSetWeight(window.location.pathname.split('/')[2], event.target.parentElement.parentElement.parentElement.parentElement.parentElement.previousSibling.previousSibling.firstChild.className, event.target.parentElement.parentElement.parentElement.id, event.target.value))
-      .then(data => window.location.reload());
+    this.props.dispatch(editSetWeight(window.location.pathname.split('/')[2], event.target.parentElement.parentElement.parentElement.parentElement.parentElement.previousSibling.previousSibling.firstChild.className, event.target.parentElement.parentElement.parentElement.id, event.target.value, event.target.parentElement.parentElement.previousSibling.innerHTML))
   }
 
   onEditSetRepetitions(event) {
-    this.props.dispatch(editSetRepetitions(window.location.pathname.split('/')[2], event.target.parentElement.parentElement.parentElement.parentElement.parentElement.previousSibling.previousSibling.firstChild.className, event.target.parentElement.parentElement.parentElement.id, event.target.value))
-      .then(data => window.location.reload());
+    this.props.dispatch(editSetRepetitions(window.location.pathname.split('/')[2], event.target.parentElement.parentElement.parentElement.parentElement.parentElement.previousSibling.previousSibling.firstChild.className, event.target.parentElement.parentElement.parentElement.id, event.target.value, event.target.parentElement.parentElement.previousSibling.previousSibling.innerHTML))
   }
 
   render() {

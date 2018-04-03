@@ -11,7 +11,6 @@ import './exercise.css';
 class ExerciseEdit extends Component {
   onEditExercise(event) {
     this.props.dispatch(editExercise(window.location.pathname.split('/')[2], event.target.className, event.target.value))
-      .then(data => window.location.reload());
   }
 
   render() {
