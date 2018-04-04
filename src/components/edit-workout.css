@@ -77,8 +77,8 @@
 }
 
 .add-set-form {
-  margin: 20px 0 20px 0;
-  padding-left: 30px
+  margin: 10px 0 30px 0;
+  padding-left: 55px
 }
 
 .add-set-form * {
@@ -88,7 +88,7 @@
 }
 
 .add-set-form input {
-  width: 100px;
+  width: 90px;
   font-size: 12px;
   margin-right: 5px
 }
@@ -148,7 +148,7 @@
 
 .edit-workout-section {
   background-color: #e6e6e6;
-  padding: 15px 20px;
+  padding: 15px 40px;
   width: 280px;
   border-radius: 5px;
   margin-bottom: 20px
@@ -161,6 +161,10 @@
 .edit-workout-section label {
   font-size: 22px;
   font-weight: 600
+}
+
+.add-exercise-form label {
+  padding-left: 20px
 }
 
 @media only screen and (min-width: 581px) and (max-width: 900px) {

@@ -22,7 +22,7 @@ class ExerciseEdit extends Component {
       return (
         <div className='individual-exercise-edit'>
           <form className='edit-exercise-name'>
-            <label htmlFor="edit-exercise-name">Exercise Name:</label>
+            <label htmlFor='edit-exercise-name'>Exercise Name:</label>
             <input type='text' id='edit-exercise-name' placeholder='Exercise Name' className={this.props._id} defaultValue={this.props.name} size='30' onBlur={(event) => this.onEditExercise(event)} />
           </form>
           {this.props.button}

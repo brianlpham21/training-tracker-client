@@ -4,8 +4,10 @@
   color: black;
   font-size: 14px;
   margin-right: 4px;
-  margin-top: 10px;
+  margin-top: 15px;
   padding: 5px 10px;
+  position: relative;
+  right: -500px
 }
 
 .edit-workout-button:hover {
@@ -44,7 +46,7 @@ hr {
 .individual-workout {
   background-color: white;
   margin: 20px;
-  padding: 30px 50px;
+  padding: 35px 70px 30px 70px;
   border-radius: 5px
 }
 

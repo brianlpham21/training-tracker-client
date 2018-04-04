@@ -89,8 +89,8 @@ class EditWorkout extends Component {
             <div key={index}>
               <ExerciseEdit {...exercises} button={delete_button} set_button={set_delete_button} />
               <form className='add-set-form' id={exercises._id} onSubmit= {(event) => this.onAddSet(event)}>
-                <input type='number' name='setWeight' placeholder='Set Weight...' min='0' />
-                <input type='number' name='setRepetitions' placeholder='Set Repetitions...' min='0' />
+                <input type='number' name='setWeight' placeholder='Set Weight' min='0' />
+                <input type='number' name='setRepetitions' placeholder='Set Repetitions' min='0' />
                 <button type='submit' className='add-set-button'><img src='https://d30y9cdsu7xlg0.cloudfront.net/png/74327-200.png' alt='add-icon' className='add-set-icon' /></button>
               </form>
             </div>
@@ -110,6 +110,7 @@ class EditWorkout extends Component {
           <div>{exercises}</div>
           <hr />
           <form className='add-exercise-form' onSubmit={(event) => this.onAddExercise(event)}>
+            <label htmlFor='exerciseName'>Add Exercise:</label>
             <input type='text' name='exerciseName' placeholder='Exercise Name...' />
             <button type='submit' className='add-exercise-button'><img src='https://d30y9cdsu7xlg0.cloudfront.net/png/74327-200.png' alt='add-icon' className='add-exercise-icon' /></button>
           </form>
