@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchWorkoutData} from '../actions/workouts';
 
 import Workout from './workout';
+import WorkoutInstructions from './workout-instructions';
 
 import './workout-log.css';
 
@@ -25,9 +26,9 @@ class WorkoutLog extends Component {
     }
 
     return (
-      <div className='workout-log'>
-        <h1 className='workout-log-title'>Workouts</h1>
-        <div>{workouts}</div>
+      <div>
+        <WorkoutInstructions />
+        <div className='workout-log'>{workouts}</div>
       </div>
     );
   }

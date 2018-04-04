@@ -15,6 +15,8 @@ import Footer from './footer';
 
 import {refreshAuthToken} from '../actions/auth';
 
+import './app.css';
+
 export class App extends React.Component {
   componentDidUpdate(prevProps) {
     if (!prevProps.loggedIn && this.props.loggedIn) {

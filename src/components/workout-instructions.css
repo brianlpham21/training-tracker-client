@@ -1,0 +1,12 @@
+.workout-instructions-main {
+  background-color: gold
+}
+
+@media only screen and (min-width: 901px) {
+  .workout-instructions-container {
+    margin: auto;
+    max-width: 800px;
+    line-height: 25px;
+    padding: 20px 90px 30px 90px;
+  }
+}

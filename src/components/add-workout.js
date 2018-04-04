@@ -17,18 +17,23 @@ class AddWorkout extends Component {
 
   render() {
     return (
-      <form
-        className="add-workout"
-        onSubmit= {(event) => this.onAddWorkout(event)}
-        >
-        <input type="text" name="workoutName" className='add-workout-input' placeholder='Enter Workout Name...' autoFocus />
-        <button
-          type="submit"
-          className="add-workout-button"
-          >
-          Start Workout
-        </button>
-      </form>
+      <div className='add-workout-main'>
+        <div className='add-workout-container'>
+          <p className='start-text'><span className='start-title'>Start Here:</span> This is your dashboard. From here you can start a new workout, catch a glimpse of your most recent workouts, or view your complete workout log history. To start a new workout, simply enter a workout name into the input bar and click the 'Start Workout' button. You can also go ahead and edit or delete workouts from this page or the complete workout log page.</p>
+          <form
+            className="add-workout"
+            onSubmit= {(event) => this.onAddWorkout(event)}
+            >
+            <input type="text" name="workoutName" className='add-workout-input' placeholder='Enter Workout Name...' autoFocus />
+            <button
+              type="submit"
+              className="add-workout-button"
+              >
+              Start Workout
+            </button>
+          </form>
+        </div>
+      </div>
     );
   }
 }

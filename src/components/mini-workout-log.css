@@ -2,3 +2,17 @@
   margin-bottom: 0;
   color: black
 }
+
+@media only screen and (min-width: 581px) and (max-width: 900px) {
+  .mini-workout-log {
+    padding: 45px 90px 35px 90px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .mini-workout-log {
+    margin: auto;
+    max-width: 800px;
+    padding: 25px 90px 60px 90px;
+  }
+}
