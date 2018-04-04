@@ -2,6 +2,10 @@
   padding: 10px 20px
 }
 
+.edit-instruction-section {
+  background-color: gold
+}
+
 .edit-workout-name-button, .edit-done-button, .add-exercise-button, .edit-workout-name-form-submit, .edit-workout-name-form-cancel, .add-set-button, .delete-exercise-button, .delete-set-button {
   border: 2px solid grey;
   border-radius: 10px;
@@ -149,5 +153,17 @@
     margin: auto;
     max-width: 800px;
     padding: 30px 90px 60px 90px;
+  }
+
+  .instructions-text-header {
+    margin: auto;
+    max-width: 800px;
+    padding: 30px 0 0 0;
+  }
+
+  .instructions-text {
+    margin: auto;
+    max-width: 800px;
+    padding: 20px 0
   }
 }

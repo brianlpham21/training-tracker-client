@@ -101,16 +101,21 @@ class EditWorkout extends Component {
     }
 
     return (
-      <div className='edit-section'>
-        <p className='instructions-text'><span className='instructions-title'>Instructions:</span> Use the + icons to add sets and exercises to your workout. You can use the edit icons to edit the workout name, exercise names, and data for weight and repetitions. If you like, you may also delete the exercises or sets using the delete icon.</p>
-        <div>{workoutForm}</div>
-        <div>{exercises}</div>
-        <hr />
-        <form className='add-exercise-form' onSubmit={(event) => this.onAddExercise(event)}>
-          <input type='text' name='exerciseName' placeholder='Exercise Name...' />
-          <button type='submit' className='add-exercise-button'><img src='https://d30y9cdsu7xlg0.cloudfront.net/png/74327-200.png' alt='add-icon' className='add-exercise-icon' /></button>
-        </form>
-        <Link to='/dashboard'><button onClick={() => this.props.dispatch(clearSelectedWorkout())} className='edit-done-button'>Done</button></Link>
+      <div className='edit-section-container'>
+        <div className='edit-instruction-section'>
+          <h1 className='instructions-text-header'>Edit Workout</h1>
+          <p className='instructions-text'><span className='instructions-title'>Instructions:</span> Use the + icons to add sets and exercises to your workout. You can use the edit icons to edit the workout name, exercise names, and data for weight and repetitions. If you like, you may also delete the exercises or sets using the delete icon.</p>
+        </div>
+        <div className='edit-section'>
+          <div>{workoutForm}</div>
+          <div>{exercises}</div>
+          <hr />
+          <form className='add-exercise-form' onSubmit={(event) => this.onAddExercise(event)}>
+            <input type='text' name='exerciseName' placeholder='Exercise Name...' />
+            <button type='submit' className='add-exercise-button'><img src='https://d30y9cdsu7xlg0.cloudfront.net/png/74327-200.png' alt='add-icon' className='add-exercise-icon' /></button>
+          </form>
+          <Link to='/dashboard'><button onClick={() => this.props.dispatch(clearSelectedWorkout())} className='edit-done-button'>Done</button></Link>
+        </div>
       </div>
     );
   }
