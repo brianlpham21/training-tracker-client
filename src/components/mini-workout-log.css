@@ -3,9 +3,19 @@
   color: black
 }
 
-@media only screen and (min-width: 581px) and (max-width: 900px) {
+@media only screen and (max-width: 640px) {
   .mini-workout-log {
-    padding: 45px 90px 35px 90px;
+    padding: 10px 10px 25px 10px;
+  }
+
+  .mini-workout-log-title {
+    padding-left: 20px
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 900px) {
+  .mini-workout-log {
+    padding: 20px 90px 25px 90px;
   }
 }
 

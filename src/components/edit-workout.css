@@ -29,7 +29,7 @@
   margin-right: 10px;
   margin-bottom: 10px;
   margin-top: 10px;
-  width: 200px;
+  width: 250px;
   font-size: 20px;
   padding-left: 10px
 }
@@ -52,7 +52,7 @@
 }
 
 .edit-done-button:hover {
-  background-color: rgba(60,179,113, 0.3);
+  background-color: rgba(255, 215, 0, 0.6);
   cursor: pointer
 }
 
@@ -76,9 +76,13 @@
   margin-left: 10px
 }
 
+.delete-exercise-button {
+  margin-left: 20px
+}
+
 .add-set-form {
   margin: 10px 0 30px 0;
-  padding-left: 55px
+  padding-left: 70px
 }
 
 .add-set-form * {
@@ -148,7 +152,7 @@
 
 .edit-workout-section {
   background-color: #e6e6e6;
-  padding: 15px 40px;
+  padding: 15px 60px;
   width: 280px;
   border-radius: 5px;
   margin-bottom: 20px
@@ -164,7 +168,7 @@
 }
 
 .add-exercise-form label {
-  padding-left: 20px
+  padding-left: 40px
 }
 
 @media only screen and (min-width: 581px) and (max-width: 900px) {

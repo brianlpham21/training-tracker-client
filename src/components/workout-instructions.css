@@ -2,7 +2,34 @@
   background-color: gold
 }
 
-@media only screen and (min-width: 901px) {
+@media only screen and (max-width: 530px) {
+  .workout-instructions-container {
+    margin: auto;
+    max-width: 800px;
+    line-height: 25px;
+    padding: 10px 30px 20px 30px;
+  }
+
+  .workout-log-title {
+    font-size: 24px
+  }
+
+  .workout-instructions-container p {
+    font-size: 14px;
+    line-height: 22px
+  }
+}
+
+@media only screen and (min-width: 531px) and (max-width: 650px) {
+  .workout-instructions-container {
+    margin: auto;
+    max-width: 800px;
+    line-height: 25px;
+    padding: 20px 50px 30px 50px;
+  }
+}
+
+@media only screen and (min-width: 651px) {
   .workout-instructions-container {
     margin: auto;
     max-width: 800px;

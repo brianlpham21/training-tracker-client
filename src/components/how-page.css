@@ -2,9 +2,36 @@
   padding: 5px 30px 15px 30px
 }
 
-@media only screen and (min-width: 581px) and (max-width: 900px) {
+@media only screen and (max-width: 460px) {
   .how-page {
+    margin: 0 auto 0 auto;
+    padding: 0 30px 35px 30px;
+  }
+
+  .how-page-text {
+    line-height: 22px
+  }
+}
+
+@media only screen and (min-width: 461px) and (max-width: 640px) {
+  .how-page {
+    margin: 40px auto 0 auto;
+    padding: 0 50px 35px 50px;
+  }
+
+  .how-page-text {
+    line-height: 24px
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 900px) {
+  .how-page {
+    margin: 40px auto 0 auto;
     padding: 0 90px 35px 90px;
+  }
+
+  .how-page-text {
+    line-height: 26px
   }
 }
 

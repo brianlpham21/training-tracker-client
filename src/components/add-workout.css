@@ -35,6 +35,11 @@ form * {
 }
 
 @media only screen and (max-width: 500px) {
+  .add-workout-container {
+    padding-top: 10px;
+    padding-bottom: 1px
+  }
+
   .add-workout-input {
     width: 240px;
     font-size: 20px;
@@ -45,8 +50,10 @@ form * {
   }
 }
 
-@media only screen and (min-width: 581px) and (max-width: 900px) {
-
+@media only screen and (min-width: 661px) and (max-width: 900px) {
+  .start-text {
+    margin: 0 50px
+  }
 }
 
 @media only screen and (min-width: 901px) {
