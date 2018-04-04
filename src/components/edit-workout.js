@@ -73,7 +73,7 @@ class EditWorkout extends Component {
     if (this.props.select_workout_data) {
       if (this.props.select_workout_data.name) {
         workoutForm =
-          <div>
+          <div className='edit-workout-section'>
             <label htmlFor="edit-workout-name">Workout Name:</label>
             <form className='edit-workout-name'>
               <input type='text' id='edit-workout-name' placeholder='Workout Name' defaultValue={this.props.select_workout_data.name} size='30' onBlur={(event) => this.onEditWorkout(event)} />
@@ -87,7 +87,6 @@ class EditWorkout extends Component {
         exercises = this.props.select_workout_data.exercises.map((exercises, index) => {
           return (
             <div key={index}>
-              <label htmlFor="add-set-form">Exercise Name:</label>
               <ExerciseEdit {...exercises} button={delete_button} set_button={set_delete_button} />
               <form className='add-set-form' id={exercises._id} onSubmit= {(event) => this.onAddSet(event)}>
                 <input type='number' name='setWeight' placeholder='Set Weight...' min='0' />

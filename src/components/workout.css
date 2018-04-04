@@ -19,14 +19,18 @@
 }
 
 .individual-workout-title {
-  margin: 0
+  margin: 0;
+  font-size: 28px;
+  color: #e74c3c;
 }
 
 .individual-workout-date {
   font-size: 15px;
   font-weight: normal;
   margin: 0;
-  vertical-align: middle
+  vertical-align: middle;
+  color: dimGrey;
+  float: right
 }
 
 hr {
@@ -35,6 +39,17 @@ hr {
   height: 1;
   margin: 15px 0;
   width: 500px
+}
+
+.individual-workout {
+  background-color: white;
+  margin: 20px;
+  padding: 30px 50px;
+  border-radius: 5px
+}
+
+.individual-workout:hover {
+  box-shadow: 3px 3px 8px hsl(0, 0%, 70%)
 }
 
 @media only screen and (max-width: 550px) {

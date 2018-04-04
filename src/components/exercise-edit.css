@@ -1,0 +1,10 @@
+.individual-exercise-edit {
+  background-color: white;
+  padding: 15px 20px;
+  width: 280px;
+  border-radius: 5px
+}
+
+.individual-exercise-edit:hover {
+  box-shadow: 3px 3px 8px hsl(0, 0%, 70%)
+}

@@ -6,7 +6,7 @@ import {editExercise} from '../actions/exercises';
 
 import ExerciseDataSetEdit from './exercise-data-set-edit';
 
-import './exercise.css';
+import './exercise-edit.css';
 
 class ExerciseEdit extends Component {
   onEditExercise(event) {
@@ -20,8 +20,9 @@ class ExerciseEdit extends Component {
 
     if (sets.length > 0) {
       return (
-        <div className='indvidual-exercise'>
+        <div className='individual-exercise-edit'>
           <form className='edit-exercise-name'>
+            <label htmlFor="edit-exercise-name">Exercise Name:</label>
             <input type='text' id='edit-exercise-name' placeholder='Exercise Name' className={this.props._id} defaultValue={this.props.name} size='30' onBlur={(event) => this.onEditExercise(event)} />
           </form>
           {this.props.button}

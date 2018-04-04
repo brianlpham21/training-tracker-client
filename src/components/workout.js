@@ -35,8 +35,7 @@ class Workout extends Component {
 
     return (
       <div className='individual-workout'>
-        <hr />
-        <h3 className='individual-workout-title'>Workout: {this.props.name} <span className='individual-workout-date'> - {date}</span></h3>
+        <h3 className='individual-workout-title'>Workout: {this.props.name} <span className='individual-workout-date'> {date}</span></h3>
         <div>{exercises}</div>
         <Link to={`/editworkout/${this.props.workout_id}`} ><button className='edit-workout-button'>Edit</button></Link>
         <button className='delete-workout-button' onClick={(event) => this.onDelete(event)}>Delete</button>
