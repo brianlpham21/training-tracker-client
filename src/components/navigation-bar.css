@@ -26,22 +26,31 @@ nav {
   margin-left: 10px
 }
 
-.nav-home-link-component, .nav-how-link-component, .nav-workoutlog-link-component, .nav-logout-button {
+.nav-home-link-component, .nav-how-link-component, .nav-workoutlog-link-component {
   text-decoration: none;
   color: lightGrey;
   position: relative;
   top: 3px;
   font-size: 16px
 }
-
 .nav-logout-button {
   border: none;
   background-color: #2b2c2d;
-  padding-left: 10px
+  padding-left: 10px;
+  text-decoration: none;
+  color: grey;
+  position: relative;
+  top: 3px;
+  font-size: 16px
+}
+
+.nav-home-link-component:hover, .nav-how-link-component:hover, .nav-workoutlog-link-component:hover {
+  color: silver
 }
 
 .nav-logout-button:hover {
-  cursor: pointer
+  cursor: pointer;
+  color: silver
 }
 
 .header-bar-link-component {

@@ -23,7 +23,7 @@ form * {
 }
 
 .add-workout-button:hover {
-  background-color: rgba(66, 134, 244, 0.7);
+  background-color: rgba(66, 134, 244, 0.4);
   cursor: pointer;
 }
 
