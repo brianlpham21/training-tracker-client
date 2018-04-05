@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
 
 import TitleBar from './title-bar';
 
@@ -7,20 +6,6 @@ import './about-page.css';
 
 class About extends Component {
   render() {
-    if (this.props.loggedIn) {
-      return (
-        <div className='about'>
-          <div className='image-container'>
-            <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/118696-200.png' alt='about-logo' className='about-logo' />
-          </div>
-          <div className='about-text'>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
-            <p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit.</p>
-          </div>
-        </div>
-      );
-    }
-
     return (
       <div className='about'>
         <TitleBar />
@@ -28,16 +13,13 @@ class About extends Component {
           <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/118696-200.png' alt='about-logo' className='about-logo' />
         </div>
         <div className='about-text'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
-          <p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit.</p>
+          <p>The Training Tracker is a web application that was developed in early 2018 with the purpose of creating a platform for users to easily and effectively track their fitness goals and workouts.</p>
+          <p>The idea behind the application sits on the driving forces that aid in the motivation and discipline required to make significant progress in the weight room. In everything that we do, progress is key and it typically helps in keeping us motivated and continuing to drive further in meeting and building on our set goals.</p>
+          <p>The Training Tracker takes all the stress and inconvenience out of setting and tracking your goals, and places them in an easy and accessible location. Being able to easily customize your workouts, as well as see your progression through past workouts at a press of a button, allows you to focus on what should be most important, your workout.</p>
         </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  loggedIn: state.auth.currentUser !== null
-});
-
-export default connect(mapStateToProps)(About);
+export default About;

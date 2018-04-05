@@ -3,17 +3,32 @@
 }
 
 .login-form-button {
-  padding: 10px 15px;
   border: 2px solid grey;
   border-radius: 10px;
-  font-size: 14px;
   color: black;
-  margin-top: 15px;
   font-family: 'Titillium Web', sans-serif;
+  font-size: 14px;
+  margin-top: 15px;
+  padding: 10px 15px;
 }
 
 .login-form-button:hover {
   background-color: rgba(255, 215, 0, 0.5);
   border: 2px solid silver;
   cursor: pointer
+}
+
+.form-input * {
+  display: inline-block;
+}
+
+.form-error {
+  color: red;
+  padding-left: 10px
+}
+
+@media only screen and (max-width: 425px) {
+  .form-input input {
+    width: 240px
+  }
 }
