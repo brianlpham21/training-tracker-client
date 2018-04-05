@@ -43,9 +43,10 @@ class ExerciseEdit extends Component {
     }
     else {
       return (
-        <div className='indvidual-exercise'>
+        <div className='individual-exercise-edit'>
           <form className='edit-exercise-name'>
-            <input type='text' id='edit-exercise-name' placeholder='Exercise Name' defaultValue={this.props.name} size='30' onBlur={(event) => this.onEditExercise(event)} />
+            <label htmlFor='edit-exercise-name'>Exercise Name:</label>
+            <input type='text' id='edit-exercise-name' placeholder='Exercise Name' className={this.props._id} defaultValue={this.props.name} size='30' onBlur={(event) => this.onEditExercise(event)} />
           </form>
           {this.props.button}
           <table>
@@ -56,6 +57,8 @@ class ExerciseEdit extends Component {
                 <th>-</th>
               </tr>
             </thead>
+            <tbody>
+            </tbody>
           </table>
         </div>
       );

@@ -21,7 +21,9 @@ class EditWorkout extends Component {
   }
 
   onEditWorkout(event) {
-    this.props.dispatch(editWorkout(window.location.pathname.split('/')[2], event.target.value))
+    event.preventDefault();
+
+    this.props.dispatch(editWorkout(this.props.select_workout_data.workout_id, event.target.value))
   }
 
   onAddExercise(event) {
@@ -36,8 +38,16 @@ class EditWorkout extends Component {
   onAddSet(event) {
     event.preventDefault();
 
-    if (event.target.setWeight.value || event.target.setRepetitions.value) {
-      this.props.dispatch(addSet(window.location.pathname.split('/')[2], event.target.id, event.target.setWeight.value, event.target.setRepetitions.value))
+    if (event.target.setWeight.value && !(event.target.setRepetitions.value)) {
+      alert('Enter the repetitions!')
+    }
+
+    if (!(event.target.setWeight.value) && event.target.setRepetitions.value) {
+      alert('Enter the weight!')
+    }
+
+    if (event.target.setWeight.value && event.target.setRepetitions.value) {
+      this.props.dispatch(addSet(this.props.select_workout_data.workout_id, event.target.id, event.target.setWeight.value, event.target.setRepetitions.value))
         .then(data => window.location.reload());
     }
   }
@@ -47,7 +57,7 @@ class EditWorkout extends Component {
 
     const result = window.confirm('Are you sure?')
     if (result) {
-      this.props.dispatch(deleteExercise(window.location.pathname.split('/')[2], event.target.parentElement.parentElement.nextSibling.id))
+      this.props.dispatch(deleteExercise(this.props.select_workout_data.workout_id, event.target.parentElement.parentElement.nextSibling.id))
         .then(data => window.location.reload());
     }
   }

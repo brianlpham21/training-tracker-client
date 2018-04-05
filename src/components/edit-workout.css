@@ -98,7 +98,7 @@
 }
 
 .add-exercise-form {
-  margin: 10px 0
+  margin: 20px 0
 }
 
 .add-exercise-form * {
@@ -171,9 +171,45 @@
   padding-left: 40px
 }
 
-@media only screen and (min-width: 581px) and (max-width: 900px) {
+
+
+@media only screen and (max-width: 550px) {
+  .edit-section {
+    padding: 35px 15px;
+  }
+
+  .instructions-text-header {
+    margin: 0;
+    padding: 20px 40px;
+  }
+
+  .instructions-text {
+    margin: 0 40px;
+    padding-bottom: 20px
+  }
+
+  .edit-workout-section {
+    padding: 15px 30px
+  }
+
+  .add-exercise-form label {
+    padding-left: 10px
+  }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 900px) {
   .edit-section {
     padding: 35px 90px 35px 90px;
+  }
+
+  .instructions-text-header {
+    margin: 0;
+    padding: 20px 80px;
+  }
+
+  .instructions-text {
+    margin: 0 80px;
+    padding-bottom: 20px
   }
 }
 

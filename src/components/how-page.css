@@ -1,10 +1,6 @@
-.how-page {
-  padding: 5px 30px 15px 30px
-}
-
 @media only screen and (max-width: 460px) {
   .how-page {
-    margin: 0 auto 0 auto;
+    margin: 20px auto 0 auto;
     padding: 0 30px 35px 30px;
   }
 
@@ -39,7 +35,6 @@
   .how-page {
     margin: 60px auto 0 auto;
     max-width: 800px;
-    padding: 0 90px 45px 90px;
   }
 
   .how-page-text {

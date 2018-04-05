@@ -35,14 +35,6 @@
   float: right
 }
 
-hr {
-  background-color: 'silver';
-  color: 'silver';
-  height: 1;
-  margin: 15px 0;
-  width: 500px
-}
-
 .individual-workout {
   background-color: white;
   margin: 20px;

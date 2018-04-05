@@ -22,7 +22,7 @@ export class NavigationBar extends React.Component {
             <div id="nav-links">
               <ul>
                 <li className='nav-home-link'><Link to='/' className='nav-home-link-component'>Home</Link></li>
-                <li className='nav-how-link'><Link to='/how-it-works' className='nav-how-link-component'>How It Works</Link></li>
+                <li className='nav-how-link'><Link to='/dashboard/how-it-works' className='nav-how-link-component'>How It Works</Link></li>
                 <li className='nav-workoutlog-link'><Link to='/dashboard/workoutlog' className='nav-workoutlog-link-component'>Workout Log</Link></li>
                 <button onClick={() => this.logOut()} className='nav-logout-button'>Log out</button>
               </ul>
