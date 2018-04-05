@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import TitleBar from './title-bar';
 
-import './about.css';
+import './about-page.css';
 
 class About extends Component {
   render() {

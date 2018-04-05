@@ -4,15 +4,10 @@
   padding: 10px 20px 25px 15px;
 }
 
-.main-information-header {
-  line-height: 35px;
-}
-
 .main-information {
-  background-color: white;
   color: #3d3d3d;
-  line-height: 25px;
   font-family: 'Titillium Web', sans-serif;
+  line-height: 30px;
   padding: 45px 30px 35px 30px;
   text-align: center;
 }

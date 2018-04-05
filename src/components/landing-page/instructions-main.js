@@ -8,7 +8,7 @@ export default function InstructionsMain() {
       <div className='main-instructions'>
         <img src='https://www.birdiebox.com/images/custom-icon.gif?crc=381262841' alt='instruction-icon' className='instruction-icon'/>
         <h2>Customizable Lifting Workouts</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
+        <p>The user interface for the Training Tracker application allows for the creation of customizable workouts; the tracker supports workouts and exercises with custom names and the input of sets & repetitions completed for each exercise at a given weight.</p>
       </div>
     </div>
   )

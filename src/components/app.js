@@ -3,10 +3,10 @@ import {connect} from 'react-redux';
 import {Route, withRouter} from 'react-router-dom';
 
 import NavigationBar from './navigation-bar';
-import LandingPage from './landing-page';
+import LandingPage from './landing-page/landing-page';
 import LoginPage from './login-page';
 import RegistrationPage from './registration-page';
-import About from './about';
+import About from './about-page';
 import Dashboard from './dashboard';
 import WorkoutLog from './workout-log';
 import EditWorkout from './edit-workout';
@@ -72,5 +72,4 @@ const mapStateToProps = state => ({
   loggedIn: state.auth.currentUser !== null
 });
 
-// Deal with update blocking - https://reacttraining.com/react-router/web/guides/dealing-with-update-blocking
 export default withRouter(connect(mapStateToProps)(App));
