@@ -65,7 +65,7 @@ class EditWorkout extends Component {
 
     const result = window.confirm('Are you sure?')
     if (result) {
-      this.props.dispatch(deleteSet(window.location.pathname.split('/')[2], event.target.parentElement.parentElement.parentElement.parentElement.parentElement.previousSibling.parentElement.nextSibling.id, event.target.parentElement.parentElement.parentElement.id))
+      this.props.dispatch(deleteSet(this.props.select_workout_data.workout_id, event.target.parentElement.parentElement.parentElement.parentElement.parentElement.previousSibling.parentElement.nextSibling.id, event.target.parentElement.parentElement.parentElement.id))
         .then(data => window.location.reload());
     }
   }

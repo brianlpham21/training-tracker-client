@@ -9,11 +9,11 @@ import './exercise-data-set-edit.css';
 
 class ExerciseDataSetEdit extends Component {
   onEditSetWeight(event) {
-    this.props.dispatch(editSetWeight(window.location.pathname.split('/')[2], event.target.parentElement.parentElement.parentElement.parentElement.parentElement.previousSibling.previousSibling.firstChild.nextSibling.className, event.target.parentElement.parentElement.parentElement.id, event.target.value, this.props.setNumber))
+    this.props.dispatch(editSetWeight(this.props.select_workout_data.workout_id, event.target.parentElement.parentElement.parentElement.parentElement.parentElement.previousSibling.previousSibling.firstChild.nextSibling.className, event.target.parentElement.parentElement.parentElement.id, event.target.value, this.props.setNumber))
   }
 
   onEditSetRepetitions(event) {
-    this.props.dispatch(editSetRepetitions(window.location.pathname.split('/')[2], event.target.parentElement.parentElement.parentElement.parentElement.parentElement.previousSibling.previousSibling.firstChild.nextSibling.className, event.target.parentElement.parentElement.parentElement.id, event.target.value, this.props.setNumber))
+    this.props.dispatch(editSetRepetitions(this.props.select_workout_data.workout_id, event.target.parentElement.parentElement.parentElement.parentElement.parentElement.previousSibling.previousSibling.firstChild.nextSibling.className, event.target.parentElement.parentElement.parentElement.id, event.target.value, this.props.setNumber))
   }
 
   render() {
@@ -36,4 +36,10 @@ class ExerciseDataSetEdit extends Component {
   }
 }
 
-export default requiresLogin()(connect()(ExerciseDataSetEdit));
+const mapStateToProps = state => {
+  return {
+    select_workout_data: state.workouts.selectWorkoutData,
+  };
+};
+
+export default requiresLogin()(connect(mapStateToProps)(ExerciseDataSetEdit));
