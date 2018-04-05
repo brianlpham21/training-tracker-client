@@ -45,7 +45,7 @@ export const addSet = (workout_id, exercise_id, weight, repetitions) => (dispatc
         });
 };
 
-export const editSetWeight = (workout_id, exercise_id, set_id, weight, item) => (dispatch, getState) => {
+export const editSetWeight = (workout_id, exercise_id, set_id, weight, set_number) => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
     const url = `${API_BASE_URL}/workouts/` + workout_id + `/exercises/` + exercise_id + `/sets/` + set_id;
 
@@ -55,7 +55,7 @@ export const editSetWeight = (workout_id, exercise_id, set_id, weight, item) => 
           Authorization: `Bearer ${authToken}`,
           'Content-Type': `application/json`
         },
-        body: JSON.stringify({number: item, weight: weight})
+        body: JSON.stringify({set_number: set_number, weight: weight})
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
@@ -65,7 +65,7 @@ export const editSetWeight = (workout_id, exercise_id, set_id, weight, item) => 
         });
 };
 
-export const editSetRepetitions = (workout_id, exercise_id, set_id, repetitions, item) => (dispatch, getState) => {
+export const editSetRepetitions = (workout_id, exercise_id, set_id, repetitions, set_number) => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
     const url = `${API_BASE_URL}/workouts/` + workout_id + `/exercises/` + exercise_id + `/sets/` + set_id;
 
@@ -75,7 +75,7 @@ export const editSetRepetitions = (workout_id, exercise_id, set_id, repetitions,
           Authorization: `Bearer ${authToken}`,
           'Content-Type': `application/json`
         },
-        body: JSON.stringify({number: item, repetitions: repetitions})
+        body: JSON.stringify({set_number: set_number, repetitions: repetitions})
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
