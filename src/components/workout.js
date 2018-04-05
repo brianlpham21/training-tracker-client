@@ -26,7 +26,7 @@ class Workout extends Component {
 
   render() {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    const month = months[Number(this.props.date.slice(5, 7))];
+    const month = months[Number(this.props.date.slice(5, 7)) - 1];
     const date = `${month} ${this.props.date.slice(8, 10)}, ${this.props.date.slice(0,4)}`
 
     const exercises = this.props.exercises.map((exercise, index) => {
