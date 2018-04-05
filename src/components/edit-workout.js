@@ -3,10 +3,8 @@ import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchSelectWorkoutData} from '../actions/workouts';
 import {editWorkout} from '../actions/workouts';
-import {addExercise} from '../actions/exercises';
-import {addSet} from '../actions/sets';
-import {deleteExercise} from '../actions/exercises';
-import {deleteSet} from '../actions/sets';
+import {addExercise, deleteExercise} from '../actions/exercises';
+import {addSet, deleteSet} from '../actions/sets';
 import {clearSelectedWorkout} from '../actions/workouts';
 
 import ExerciseEdit from './exercise-edit';
