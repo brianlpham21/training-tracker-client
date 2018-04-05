@@ -4,9 +4,9 @@ import {Route, withRouter} from 'react-router-dom';
 
 import NavigationBar from './navigation-bar';
 import LandingPage from './landing-page/landing-page';
-import LoginPage from './login-page';
-import RegistrationPage from './registration-page';
-import About from './about-page';
+import LoginPage from './landing-page/login-page';
+import RegistrationPage from './landing-page/registration-page';
+import About from './landing-page/about-page';
 import Dashboard from './dashboard';
 import WorkoutLog from './workout-log';
 import EditWorkout from './edit-workout';
