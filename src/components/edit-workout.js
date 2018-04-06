@@ -133,6 +133,9 @@ class EditWorkout extends Component {
 const mapStateToProps = state => {
   return {
     select_workout_data: state.workouts.selectWorkoutData,
+    // select_workout_data: (state.workouts.workoutData.filter(function(workout){
+    //   return workout.workout_id === window.location.pathname.split('/')[2];
+    // }))[0]
   };
 };
 

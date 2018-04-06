@@ -1,6 +1,5 @@
 import {
     FETCH_WORKOUT_DATA_SUCCESS,
-    FETCH_RECENT_WORKOUT_DATA_SUCCESS,
     FETCH_SELECT_WORKOUT_DATA_SUCCESS,
     ADD_WORKOUT_SUCCESS,
     EDIT_WORKOUT_SUCCESS,
@@ -11,7 +10,6 @@ import {
 
 const initialState = {
     workoutData: '',
-    recentWorkoutData: '',
     selectWorkoutData: '',
     addWorkoutData: '',
     error: null
@@ -21,11 +19,6 @@ export default function reducer(state = initialState, action) {
     if (action.type === FETCH_WORKOUT_DATA_SUCCESS) {
         return Object.assign({}, state, {
             workoutData: action.workoutData,
-            error: null
-        });
-    } else if (action.type === FETCH_RECENT_WORKOUT_DATA_SUCCESS) {
-        return Object.assign({}, state, {
-            recentWorkoutData: action.recentWorkoutData,
             error: null
         });
     } else if (action.type === FETCH_SELECT_WORKOUT_DATA_SUCCESS) {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchRecentWorkoutData} from '../actions/workouts';
+import {fetchWorkoutData} from '../actions/workouts';
 
 import Workout from './workout';
 
@@ -9,15 +9,15 @@ import './mini-workout-log.css';
 
 class MiniWorkoutLog extends Component {
   componentDidMount() {
-    this.props.dispatch(fetchRecentWorkoutData());
+    this.props.dispatch(fetchWorkoutData());
   }
 
   render() {
     let workouts = '';
 
-    if (this.props.recent_workout_data[0]) {
-      if (this.props.recent_workout_data[0].user) {
-        workouts = this.props.recent_workout_data.map((workout, index) => {
+    if (this.props.workout_data[0]) {
+      if (this.props.workout_data[0].user) {
+        workouts = this.props.workout_data.slice(0, 3).map((workout, index) => {
           return <Workout key={index} {...workout}/>
         })
       }
@@ -34,7 +34,7 @@ class MiniWorkoutLog extends Component {
 
 const mapStateToProps = state => {
   return {
-    recent_workout_data: state.workouts.recentWorkoutData
+    workout_data: state.workouts.workoutData
   };
 };
 

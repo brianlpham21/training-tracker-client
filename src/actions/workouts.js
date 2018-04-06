@@ -7,12 +7,6 @@ export const fetchWorkoutDataSuccess = workoutData => ({
     workoutData
 });
 
-export const FETCH_RECENT_WORKOUT_DATA_SUCCESS = 'FETCH_RECENT_WORKOUT_DATA_SUCCESS';
-export const fetchRecentWorkoutDataSuccess = recentWorkoutData => ({
-    type: FETCH_RECENT_WORKOUT_DATA_SUCCESS,
-    recentWorkoutData
-});
-
 export const FETCH_SELECT_WORKOUT_DATA_SUCCESS = 'FETCH_SELECT_WORKOUT_DATA_SUCCESS';
 export const fetchSelectWorkoutDataSuccess = selectWorkoutData => ({
     type: FETCH_SELECT_WORKOUT_DATA_SUCCESS,
@@ -61,22 +55,6 @@ export const fetchWorkoutData = () => (dispatch, getState) => {
         .then(res => res.json())
         .then(data => (data.reverse()))
         .then((data) => dispatch(fetchWorkoutDataSuccess(data)))
-        .catch(err => {
-            dispatch(workoutError(err));
-        });
-};
-
-export const fetchRecentWorkoutData = () => (dispatch, getState) => {
-    const authToken = getState().auth.authToken;
-    return fetch(`${API_BASE_URL}/workouts/limit`, {
-        method: 'GET',
-        headers: {
-            Authorization: `Bearer ${authToken}`
-        }
-    })
-        .then(res => normalizeResponseErrors(res))
-        .then(res => res.json())
-        .then((data) => dispatch(fetchRecentWorkoutDataSuccess(data)))
         .catch(err => {
             dispatch(workoutError(err));
         });
