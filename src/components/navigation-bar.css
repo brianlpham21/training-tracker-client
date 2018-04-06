@@ -45,12 +45,12 @@ nav {
 }
 
 .nav-home-link-component:hover, .nav-how-link-component:hover, .nav-workoutlog-link-component:hover {
-  color: silver
+  color: gold
 }
 
 .nav-logout-button:hover {
   cursor: pointer;
-  color: silver
+  color: #ce4c4c
 }
 
 .header-bar-link-component {
