@@ -29,20 +29,32 @@ form * {
 
 .add-workout-input {
   font-size: 25px;
-  width: 400px;
   margin: auto;
-  padding: 6px 20px
+  padding: 6px 20px;
+  width: 400px;
+}
+
+.start-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.start-text {
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 10px;
+  padding: 0 0 10px 0;
 }
 
 @media only screen and (max-width: 500px) {
   .add-workout-container {
+    padding-bottom: 1px;
     padding-top: 10px;
-    padding-bottom: 1px
   }
 
   .add-workout-input {
-    width: 240px;
     font-size: 20px;
+    width: 240px;
   }
 
   .add-workout-button {
@@ -54,8 +66,4 @@ form * {
   .start-text {
     margin: 0 50px
   }
-}
-
-@media only screen and (min-width: 901px) {
-
 }

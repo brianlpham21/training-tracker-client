@@ -8,7 +8,8 @@ class WorkoutInstructions extends Component {
       <div className='workout-instructions-main'>
         <div className='workout-instructions-container'>
           <h1 className='workout-log-title'>Workout Log</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+          <p>Below you will find your personal workout log. If you don't see any workouts, go ahead and start working out now so you have some to enter! In the workout log you will find all your past workouts, the exercises that you completed, and the amount of sets and repetitions completed at a given weight. You can go ahead and edit the contents of each workout using the 'Edit' button or delete a workout in its entirety using the 'Delete' button.</p>
+          <p>Easy enough, huh?</p>
         </div>
       </div>
     );

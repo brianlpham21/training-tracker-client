@@ -110,8 +110,9 @@ class EditWorkout extends Component {
     return (
       <div className='edit-section-container'>
         <div className='edit-instruction-section'>
-          <h1 className='instructions-text-header'>Edit Workout</h1>
-          <p className='instructions-text'><span className='instructions-title'>Instructions:</span> Use the + icons to add sets and exercises to your workout. You can use the edit icons to edit the workout name, exercise names, and data for weight and repetitions. If you like, you may also delete the exercises or sets using the delete icon.</p>
+          <h1 className='instructions-text-header'>Edit Your Workout</h1>
+          <p className='instructions-text'><span className='instructions-title'>Instructions: </span>There are essentially three key actions available to you when editing a select workout: updating, adding, or deleting. To update the workout name, an exercise name, or the set amounts for the weight and repetitions, you can go ahead and manually change them in the inputs provided.</p>
+          <p className='instructions-text'>To add sets or exercises to your workout, you can use the + icons provided with the appropriate labels. And to delete a set or exercise from your workout, selecting the trash can icon provided will remove that element from your workout.</p>
         </div>
         <div className='edit-section'>
           <div>{workoutForm}</div>
