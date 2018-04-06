@@ -13,6 +13,8 @@ class AddWorkout extends Component {
       this.props.dispatch(addWorkout(event.target.workoutName.value))
         .then(data => window.location.replace(`editworkout/${data.addWorkoutData.workout_id}`));
     }
+
+    alert('Enter a workout name.');
   }
 
   render() {
