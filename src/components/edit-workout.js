@@ -112,7 +112,7 @@ class EditWorkout extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    select_workout_data: state.workouts.workoutData || []
+    select_workout_data: state.workouts.data || []
   };
 };
 

@@ -30,7 +30,7 @@ class MiniWorkoutLog extends Component {
 
 const mapStateToProps = state => {
   return {
-    workout_data: state.workouts.workoutData || []
+    workout_data: state.workouts.data || []
   };
 };
 

@@ -1,6 +1,5 @@
 import {
     FETCH_WORKOUT_DATA_SUCCESS,
-    FETCH_SELECT_WORKOUT_DATA_SUCCESS,
     ADD_WORKOUT_SUCCESS,
     EDIT_WORKOUT_SUCCESS,
     DELETE_WORKOUT_DATA_SUCCESS,
@@ -9,8 +8,7 @@ import {
 } from '../actions/workouts';
 
 const initialState = {
-    workoutData: '',
-    selectWorkoutData: '',
+    data: '',
     addWorkoutData: '',
     error: null
 };
@@ -18,12 +16,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
     if (action.type === FETCH_WORKOUT_DATA_SUCCESS) {
         return Object.assign({}, state, {
-            workoutData: action.workoutData,
-            error: null
-        });
-    } else if (action.type === FETCH_SELECT_WORKOUT_DATA_SUCCESS) {
-        return Object.assign({}, state, {
-            selectWorkoutData: action.selectWorkoutData,
+            data: action.workoutData,
             error: null
         });
     } else if (action.type === ADD_WORKOUT_SUCCESS) {
