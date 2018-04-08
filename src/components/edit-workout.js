@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchSelectWorkoutData} from '../actions/workouts';
+import {fetchWorkoutData} from '../actions/workouts';
 import {editWorkout} from '../actions/workouts';
-import {addExercise, deleteExercise} from '../actions/exercises';
-import {addSet, deleteSet} from '../actions/sets';
+import {addExercise} from '../actions/exercises';
+import {addSet} from '../actions/sets';
 import {clearSelectedWorkout} from '../actions/workouts';
 
 import ExerciseEdit from './exercise-edit';
@@ -15,25 +15,23 @@ import './edit-workout.css';
 
 class EditWorkout extends Component {
   componentDidMount() {
-    this.props.dispatch(fetchSelectWorkoutData(window.location.pathname.split('/')[2]));
+    this.props.dispatch(fetchWorkoutData());
   }
 
-  onEditWorkout(event) {
+  onEditWorkout(id, event) {
     event.preventDefault();
-
-    this.props.dispatch(editWorkout(this.props.select_workout_data.workout_id, event.target.value))
+    this.props.dispatch(editWorkout(id, event.target.value))
   }
 
   onAddExercise(event) {
     event.preventDefault();
-
     if (event.target.exerciseName.value) {
-      this.props.dispatch(addExercise(window.location.pathname.split('/')[2], event.target.exerciseName.value))
+      this.props.dispatch(addExercise(this.props.id, event.target.exerciseName.value))
         .then(data => window.location.reload());
     }
   }
 
-  onAddSet(event) {
+  onAddSet(workout_id, exercise_id, event) {
     event.preventDefault();
 
     if (event.target.setWeight.value && !(event.target.setRepetitions.value)) {
@@ -45,58 +43,40 @@ class EditWorkout extends Component {
     }
 
     if (event.target.setWeight.value && event.target.setRepetitions.value) {
-      this.props.dispatch(addSet(this.props.select_workout_data.workout_id, event.target.id, event.target.setWeight.value, event.target.setRepetitions.value))
-        .then(data => window.location.reload());
-    }
-  }
-
-  onDeleteExercise(event) {
-    event.preventDefault();
-
-    const result = window.confirm('Are you sure?')
-    if (result) {
-      this.props.dispatch(deleteExercise(this.props.select_workout_data.workout_id, event.target.parentElement.parentElement.nextSibling.id))
-        .then(data => window.location.reload());
-    }
-  }
-
-  onDeleteSet(event) {
-    event.preventDefault();
-
-    const result = window.confirm('Are you sure?')
-    if (result) {
-      this.props.dispatch(deleteSet(this.props.select_workout_data.workout_id, event.target.parentElement.parentElement.parentElement.parentElement.parentElement.previousSibling.parentElement.nextSibling.id, event.target.parentElement.parentElement.parentElement.id))
+      this.props.dispatch(addSet(workout_id, exercise_id, event.target.setWeight.value, event.target.setRepetitions.value))
         .then(data => window.location.reload());
     }
   }
 
   render() {
-    const delete_button = <button className='delete-exercise-button' onClick= {(event) => this.onDeleteExercise(event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-exercise-icon' /></button>;
+    const id = this.props.id;
 
-    const set_delete_button = <button className='delete-set-button' onClick= {(event) => this.onDeleteSet(event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-set-icon' /></button>;
+    const workout = (this.props.select_workout_data.filter(function(workout) {
+      return workout.workout_id === id;
+    }));
 
     let workoutForm = '';
     let exercises ='';
 
-    if (this.props.select_workout_data) {
-      if (this.props.select_workout_data.name) {
+    if (workout[0]) {
+      if (workout[0].user) {
         workoutForm =
           <div className='edit-workout-section'>
             <label htmlFor="edit-workout-name">Workout Name:</label>
             <form className='edit-workout-name'>
-              <input type='text' id='edit-workout-name' placeholder='Workout Name' defaultValue={this.props.select_workout_data.name} size='30' onBlur={(event) => this.onEditWorkout(event)} />
+              <input type='text' id='edit-workout-name' placeholder='Workout Name' defaultValue={workout[0].name} size='30' onBlur={(event) => this.onEditWorkout(workout[0].workout_id, event)} />
             </form>
           </div>
       }
     }
 
-    if (this.props.select_workout_data) {
-      if(this.props.select_workout_data.exercises) {
-        exercises = this.props.select_workout_data.exercises.map((exercises, index) => {
+    if (workout[0]) {
+      if(workout[0].user) {
+        exercises = workout[0].exercises.map((exercises, index) => {
           return (
             <div key={index}>
-              <ExerciseEdit {...exercises} button={delete_button} set_button={set_delete_button} />
-              <form className='add-set-form' id={exercises._id} onSubmit= {(event) => this.onAddSet(event)}>
+              <ExerciseEdit {...exercises} id={this.props.id} />
+              <form className='add-set-form' onSubmit= {(event) => this.onAddSet(workout[0].workout_id, exercises._id, event)}>
                 <input type='number' name='setWeight' placeholder='Set Weight' min='0' />
                 <input type='number' name='setRepetitions' placeholder='Set Repetitions' min='0' />
                 <button type='submit' className='add-set-button'><img src='https://d30y9cdsu7xlg0.cloudfront.net/png/74327-200.png' alt='add-icon' className='add-set-icon' /></button>
@@ -130,12 +110,9 @@ class EditWorkout extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
-    select_workout_data: state.workouts.selectWorkoutData,
-    // select_workout_data: (state.workouts.workoutData.filter(function(workout){
-    //   return workout.workout_id === window.location.pathname.split('/')[2];
-    // }))[0]
+    select_workout_data: state.workouts.workoutData || []
   };
 };
 

@@ -53,13 +53,13 @@ export class App extends React.Component {
         <div className="main-content">
           <NavigationBar />
           <Route exact path="/" component={LandingPage} />
-          <Route exact path="/login" component={LoginPage} />
-          <Route exact path="/register" component={RegistrationPage} />
-          <Route exact path="/about" component={About} />
+          <Route path="/login" component={LoginPage} />
+          <Route path="/register" component={RegistrationPage} />
+          <Route path="/about" component={About} />
           <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/dashboard/workoutlog" component={WorkoutLog} />
-          <Route exact path="/dashboard/how-it-works" component={HowPage} />
-          <Route exact path="/editworkout/:workout_id" component={EditWorkout} />
+          <Route path="/dashboard/workoutlog" component={WorkoutLog} />
+          <Route path="/dashboard/how-it-works" component={HowPage} />
+          <Route path="/editworkout/:workout_id" render={({match}) => <EditWorkout id={match.params.workout_id} />} />
         </div>
         <Footer />
       </div>

@@ -2,20 +2,31 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 
-import {editExercise} from '../actions/exercises';
+import {editExercise, deleteExercise} from '../actions/exercises';
 
 import ExerciseDataSetEdit from './exercise-data-set-edit';
 
 import './exercise-edit.css';
 
 class ExerciseEdit extends Component {
-  onEditExercise(event) {
-    this.props.dispatch(editExercise(window.location.pathname.split('/')[2], event.target.className, event.target.value))
+  onEditExercise(workout_id, id, event) {
+    event.preventDefault();
+    this.props.dispatch(editExercise(workout_id, id, event.target.value))
+  }
+
+  onDeleteExercise(workout_id, id, event) {
+    event.preventDefault();
+
+    const result = window.confirm('Are you sure?')
+    if (result) {
+      this.props.dispatch(deleteExercise(workout_id, id))
+        .then(data => window.location.reload());
+    }
   }
 
   render() {
     const sets = this.props.sets.map((set, index) => {
-      return <ExerciseDataSetEdit key={index} setNumber={index} {...set} set_button={this.props.set_button} />
+      return <ExerciseDataSetEdit key={index} setNumber={index} {...set} id={this.props.id} exercise_id={this.props._id} />
     });
 
     if (sets.length > 0) {
@@ -23,9 +34,9 @@ class ExerciseEdit extends Component {
         <div className='individual-exercise-edit'>
           <form className='edit-exercise-name'>
             <label htmlFor='edit-exercise-name'>Exercise Name:</label>
-            <input type='text' id='edit-exercise-name' placeholder='Exercise Name' className={this.props._id} defaultValue={this.props.name} size='30' onBlur={(event) => this.onEditExercise(event)} />
+            <input type='text' id='edit-exercise-name' placeholder='Exercise Name' defaultValue={this.props.name} size='30' onBlur={(event) => this.onEditExercise(this.props.id, this.props._id, event)} />
           </form>
-          {this.props.button}
+          <button className='delete-exercise-button' onClick= {(event) => this.onDeleteExercise(this.props.id, this.props._id, event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-exercise-icon' /></button>
           <table>
             <thead>
               <tr className='indvidual-exercise-data-header'>
@@ -46,9 +57,9 @@ class ExerciseEdit extends Component {
         <div className='individual-exercise-edit'>
           <form className='edit-exercise-name'>
             <label htmlFor='edit-exercise-name'>Exercise Name:</label>
-            <input type='text' id='edit-exercise-name' placeholder='Exercise Name' className={this.props._id} defaultValue={this.props.name} size='30' onBlur={(event) => this.onEditExercise(event)} />
+            <input type='text' id='edit-exercise-name' placeholder='Exercise Name' defaultValue={this.props.name} size='30' onBlur={(event) => this.onEditExercise(this.props.id, this.props._id, event)} />
           </form>
-          {this.props.button}
+          <button className='delete-exercise-button' onClick= {(event) => this.onDeleteExercise(this.props.id, this.props._id, event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-exercise-icon' /></button>
           <table>
             <thead>
               <tr className='indvidual-exercise-data-header'>

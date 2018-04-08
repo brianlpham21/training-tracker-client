@@ -15,13 +15,9 @@ class MiniWorkoutLog extends Component {
   render() {
     let workouts = '';
 
-    if (this.props.workout_data[0]) {
-      if (this.props.workout_data[0].user) {
-        workouts = this.props.workout_data.slice(0, 3).map((workout, index) => {
-          return <Workout key={index} {...workout}/>
-        })
-      }
-    }
+    workouts = this.props.workout_data.slice(0, 3).map((workout, index) => {
+      return <Workout key={index} {...workout}/>
+    })
 
     return (
       <div className='mini-workout-log'>
@@ -34,7 +30,7 @@ class MiniWorkoutLog extends Component {
 
 const mapStateToProps = state => {
   return {
-    workout_data: state.workouts.workoutData
+    workout_data: state.workouts.workoutData || []
   };
 };
 

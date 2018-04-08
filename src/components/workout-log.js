@@ -17,13 +17,9 @@ class WorkoutLog extends Component {
   render() {
     let workouts = '';
 
-    if (this.props.workout_data[0]) {
-      if (this.props.workout_data[0].user) {
-        workouts = this.props.workout_data.map((workout, index) => {
-          return <Workout key={index} {...workout}/>
-        })
-      }
-    }
+    workouts = this.props.workout_data.map((workout, index) => {
+      return <Workout key={index} {...workout}/>
+    })
 
     return (
       <div>
@@ -36,7 +32,7 @@ class WorkoutLog extends Component {
 
 const mapStateToProps = state => {
   return {
-    workout_data: state.workouts.workoutData
+    workout_data: state.workouts.workoutData || []
   };
 };
 
