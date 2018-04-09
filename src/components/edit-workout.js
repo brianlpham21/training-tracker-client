@@ -5,7 +5,6 @@ import {fetchWorkoutData} from '../actions/workouts';
 import {editWorkout} from '../actions/workouts';
 import {addExercise} from '../actions/exercises';
 import {addSet} from '../actions/sets';
-import {clearSelectedWorkout} from '../actions/workouts';
 
 import ExerciseEdit from './exercise-edit';
 
@@ -103,7 +102,7 @@ class EditWorkout extends Component {
             <input type='text' name='exerciseName' placeholder='Exercise Name...' />
             <button type='submit' className='add-exercise-button'><img src='https://d30y9cdsu7xlg0.cloudfront.net/png/74327-200.png' alt='add-icon' className='add-exercise-icon' /></button>
           </form>
-          <Link to='/dashboard'><button onClick={() => this.props.dispatch(clearSelectedWorkout())} className='edit-done-button'>Done</button></Link>
+          <Link to='/dashboard'><button className='edit-done-button'>Done</button></Link>
         </div>
       </div>
     );

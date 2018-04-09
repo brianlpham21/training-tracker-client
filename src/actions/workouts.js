@@ -25,12 +25,6 @@ export const deleteWorkoutDataSuccess = error => ({
     error
 });
 
-export const CLEAR_WORKOUT_DATA = 'CLEAR_WORKOUT_DATA';
-export const clearWorkoutData = error => ({
-    type: CLEAR_WORKOUT_DATA,
-    error
-});
-
 export const WORKOUT_ERROR = 'WORKOUT_ERROR';
 export const workoutError = error => ({
     type: WORKOUT_ERROR,
@@ -87,15 +81,11 @@ export const editWorkout = (workout_id, name) => (dispatch, getState) => {
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
-        .then((data) => dispatch(editWorkoutSuccess(data)))
+        .then(data => dispatch(editWorkoutSuccess(data)))
         .catch(err => {
             dispatch(workoutError(err));
         });
 };
-
-export const clearSelectedWorkout = () => (dispatch, getState) => {
-  dispatch(clearWorkoutData());
-}
 
 export const deleteWorkout = data => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
