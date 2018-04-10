@@ -2,6 +2,11 @@ import React from 'react';
 
 import './footer.css';
 
+import facebook from '../images/facebook-image.png'
+import instagram from '../images/instagram-image.gif'
+import twitter from '../images/twitter-image.svg'
+import email from '../images/email-image.png'
+
 export default function Footer() {
   return (
     <div className='footer'>
@@ -13,7 +18,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <img
-              src='http://www.danielas.com.au/www/1015/files/facebook-5-xxl.png'
+              src={facebook}
               alt='facebook-icon'
               className='social-media-icon'
             />
@@ -25,7 +30,8 @@ export default function Footer() {
             target='_blank'
             rel="noopener noreferrer"
           >
-            <img  src='https://static1.squarespace.com/static/54b83998e4b0a17414b429a9/54d2ccbfe4b08b02e24f050a/54d2ccbfe4b0526a666a23d5/1470421919330/Instagram+Icon.gif'
+            <img
+              src={instagram}
               alt='instagram-icon'
               className='social-media-icon'
             />
@@ -38,7 +44,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <img
-              src='https://image.flaticon.com/icons/svg/56/56729.svg'
+              src={twitter}
               alt='twitter-icon'
               className='social-media-icon'
             />
@@ -47,7 +53,7 @@ export default function Footer() {
         <li>
           <a href=''>
             <img
-              src='http://concept4u.com/wp-content/uploads/2005/12/email-icon-transparent-background.png'
+              src={email}
               alt='email-icon'
               className='social-media-icon'
             />

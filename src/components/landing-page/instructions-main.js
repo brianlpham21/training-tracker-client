@@ -2,12 +2,14 @@ import React from 'react';
 
 import './instructions-main.css'
 
+import ruler_pencil from '../../images/ruler-pencil.gif';
+
 export default function InstructionsMain() {
   return (
     <div className='main-instructions-container'>
       <div className='main-instructions'>
         <img
-          src='https://www.birdiebox.com/images/custom-icon.gif?crc=381262841'
+          src={ruler_pencil}
           alt='instruction-icon'
           className='instruction-icon'
         />

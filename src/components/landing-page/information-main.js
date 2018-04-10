@@ -2,12 +2,14 @@ import React from 'react';
 
 import './information-main.css';
 
+import heart_image from '../../images/heart-image.png';
+
 export default function InformationMain() {
   return (
     <div className='main-information'>
       <img
-        src='http://cdn.onlinewebfonts.com/svg/img_454773.png'
-        alt='main-information-icon' 
+        src={heart_image}
+        alt='main-information-icon'
         className='main-information-icon'
       />
       <h2 className='main-information-header'>Get Started With Your Fitness Goals</h2>

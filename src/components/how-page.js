@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 
+import logo from '../images/logo.png';
+
 import './how-page.css';
 
 class HowPage extends Component {
@@ -10,7 +12,7 @@ class HowPage extends Component {
       <div className='how-page'>
         <div className='logo-how-page-container'>
           <img
-            src='https://d30y9cdsu7xlg0.cloudfront.net/png/118696-200.png'
+            src={logo}
             alt='logo'
             className='logo-how-page'
           />

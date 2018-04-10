@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import logo from '../../images/logo.png'
+
 import './start-screen.css';
 
 export default function StartScreen() {
@@ -8,7 +10,7 @@ export default function StartScreen() {
     <div className='start-screen'>
       <div className='container'>
         <img
-          src='https://d30y9cdsu7xlg0.cloudfront.net/png/118696-200.png'
+          src={logo}
           alt='main-logo'
           className='main-logo'
         />
