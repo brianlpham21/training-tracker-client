@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import TitleBar from './title-bar';
 
@@ -10,7 +10,11 @@ class About extends Component {
       <div className='about'>
         <TitleBar />
         <div className='image-container'>
-          <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/118696-200.png' alt='about-logo' className='about-logo' />
+          <img
+            src='https://d30y9cdsu7xlg0.cloudfront.net/png/118696-200.png'
+            alt='about-logo'
+            className='about-logo'
+          />
         </div>
         <div className='about-text'>
           <p>The Training Tracker is a web application that was developed in early 2018 with the purpose of creating a platform for users to easily and effectively track their fitness goals and workouts.</p>

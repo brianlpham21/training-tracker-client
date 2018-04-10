@@ -9,7 +9,11 @@ class HowPage extends Component {
     return (
       <div className='how-page'>
         <div className='logo-how-page-container'>
-          <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/118696-200.png' alt='logo' className='logo-how-page' />
+          <img
+            src='https://d30y9cdsu7xlg0.cloudfront.net/png/118696-200.png'
+            alt='logo'
+            className='logo-how-page'
+          />
         </div>
         <div className='how-page-text'>
           <p>The Training Tracker application allows users to effectively track their own fitness goals through a easy-to-understand and user-friendly user interface.</p>

@@ -28,12 +28,18 @@ class AddWorkout extends Component {
           <form
             className="add-workout"
             onSubmit= {(event) => this.onAddWorkout(event)}
-            >
-            <input type="text" name="workoutName" className='add-workout-input' placeholder='Enter Workout Name...' autoFocus />
+          >
+            <input
+              type="text"
+              name="workoutName"
+              className='add-workout-input'
+              placeholder='Enter Workout Name...'
+              autoFocus
+            />
             <button
               type="submit"
               className="add-workout-button"
-              >
+            >
               Start Workout
             </button>
           </form>

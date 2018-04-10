@@ -34,9 +34,25 @@ class ExerciseEdit extends Component {
         <div className='individual-exercise-edit'>
           <form className='edit-exercise-name'>
             <label htmlFor='edit-exercise-name'>Exercise Name:</label>
-            <input type='text' id='edit-exercise-name' placeholder='Exercise Name' defaultValue={this.props.name} size='30' onBlur={(event) => this.onEditExercise(this.props.id, this.props._id, event)} />
+            <input
+              type='text'
+              id='edit-exercise-name'
+              placeholder='Exercise Name'
+              defaultValue={this.props.name}
+              size='30'
+              onBlur={(event) => this.onEditExercise(this.props.id, this.props._id, event)}
+            />
           </form>
-          <button className='delete-exercise-button' onClick= {(event) => this.onDeleteExercise(this.props.id, this.props._id, event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-exercise-icon' /></button>
+          <button
+            className='delete-exercise-button'
+            onClick= {(event) => this.onDeleteExercise(this.props.id, this.props._id, event)}
+          >
+            <img
+              src='https://png.icons8.com/metro/1600/delete.png'
+              alt='delete-icon'
+              className='delete-exercise-icon'
+            />
+          </button>
           <table>
             <thead>
               <tr className='indvidual-exercise-data-header'>
@@ -57,9 +73,25 @@ class ExerciseEdit extends Component {
         <div className='individual-exercise-edit'>
           <form className='edit-exercise-name'>
             <label htmlFor='edit-exercise-name'>Exercise Name:</label>
-            <input type='text' id='edit-exercise-name' placeholder='Exercise Name' defaultValue={this.props.name} size='30' onBlur={(event) => this.onEditExercise(this.props.id, this.props._id, event)} />
+            <input
+              type='text'
+              id='edit-exercise-name'
+              placeholder='Exercise Name'
+              defaultValue={this.props.name}
+              size='30'
+              onBlur={(event) => this.onEditExercise(this.props.id, this.props._id, event)}
+            />
           </form>
-          <button className='delete-exercise-button' onClick= {(event) => this.onDeleteExercise(this.props.id, this.props._id, event)}><img src='https://png.icons8.com/metro/1600/delete.png' alt='delete-icon' className='delete-exercise-icon' /></button>
+          <button
+            className='delete-exercise-button'
+            onClick= {(event) => this.onDeleteExercise(this.props.id, this.props._id, event)}
+          >
+            <img
+              src='https://png.icons8.com/metro/1600/delete.png'
+              alt='delete-icon'
+              className='delete-exercise-icon'
+            />
+          </button>
           <table>
             <thead>
               <tr className='indvidual-exercise-data-header'>
