@@ -9,7 +9,8 @@ describe('<AboutPage/>', () => {
     shallow(<AboutPage />);
   });
 
-  it('Renders title bar without crashing', () => {
-    shallow(<TitleBar />);
+  it('Renders the about class', () => {
+    const wrapper = shallow(<AboutPage />);
+    expect(wrapper.hasClass('about')).toEqual(true);
   });
 })

@@ -7,4 +7,9 @@ describe('<InformationMain/>', () => {
   it('Renders without crashing', () => {
     shallow(<InformationMain />);
   });
+
+  it('Renders the information class', () => {
+    const wrapper = shallow(<InformationMain />);
+    expect(wrapper.hasClass('main-information')).toEqual(true);
+  });
 })
