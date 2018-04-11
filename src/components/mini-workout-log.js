@@ -19,6 +19,13 @@ class MiniWorkoutLog extends Component {
       return <Workout key={index} {...workout}/>
     })
 
+    if (workouts.length < 1) {
+      return (
+        <div className='mini-workout-log'>
+        </div>
+      )
+    }
+
     return (
       <div className='mini-workout-log'>
         <h1 className='mini-workout-log-title'>Recent Workouts</h1>
