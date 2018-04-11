@@ -7,4 +7,4 @@ describe('<StartScreen/>', () => {
   it('Renders without crashing', () => {
     shallow(<StartScreen />);
   });
-}
+})
