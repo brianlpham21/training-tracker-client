@@ -7,4 +7,9 @@ describe('<RegistrationPage/>', () => {
   it('Renders without crashing', () => {
     shallow(<RegistrationPage />);
   });
+
+  it('Renders the container class', () => {
+    const wrapper = shallow(<RegistrationPage />);
+    expect(wrapper.hasClass('registration-page')).toEqual(true);
+  });
 })
