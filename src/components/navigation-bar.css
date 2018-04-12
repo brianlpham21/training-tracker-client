@@ -65,10 +65,6 @@ nav {
   text-shadow: 0 0 1px white;
 }
 
-.current {
-  color: gold
-}
-
 @media only screen and (max-width: 600px) {
   #nav-container {
     padding: 0 20px

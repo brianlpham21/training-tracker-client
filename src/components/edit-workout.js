@@ -26,7 +26,7 @@ class EditWorkout extends Component {
     event.preventDefault();
     if (event.target.exerciseName.value) {
       this.props.dispatch(addExercise(this.props.id, event.target.exerciseName.value))
-        .then(data => window.location.reload());
+        // .then(data => window.location.reload());
     }
   }
 
@@ -152,7 +152,7 @@ class EditWorkout extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    select_workout_data: state.workouts.data || []
+    select_workout_data: state.workouts.data || [],
   };
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import Input from './input';
+import {Input} from './input';
 
 import StartScreen from './start-screen'
 

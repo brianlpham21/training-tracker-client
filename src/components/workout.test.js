@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import Workout from './workout';
+import {Workout} from './workout';
 
 import Footer from './footer';
 
