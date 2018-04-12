@@ -26,7 +26,7 @@ class EditWorkout extends Component {
     event.preventDefault();
     if (event.target.exerciseName.value) {
       this.props.dispatch(addExercise(this.props.id, event.target.exerciseName.value))
-        // .then(data => window.location.reload());
+        .then(data => window.location.reload());
     }
   }
 

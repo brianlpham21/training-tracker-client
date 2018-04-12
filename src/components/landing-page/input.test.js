@@ -1,12 +1,24 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import {Input} from './input';
-
-import StartScreen from './start-screen'
+import Input from './input';
 
 describe('<Input/>', () => {
   it('Renders without crashing', () => {
-    shallow(<StartScreen />);
+    const props = {
+      meta: {
+        active: false,
+        touched: false,
+        error: false,
+        warning: false
+      },
+      input: {
+        name: 'name'
+      },
+      type: 'type',
+      label: 'label'
+    }
+
+    shallow(<Input {...props} />);
   });
 })

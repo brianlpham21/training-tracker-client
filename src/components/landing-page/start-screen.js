@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import logo from '../../images/logo.png'
+import logo from '../../images/logo.png';
+import arrow from '../../images/arrow.png';
 
 import './start-screen.css';
 
@@ -29,7 +30,7 @@ export default function StartScreen() {
           </li>
         </ul>
         <img
-          src='https://www.materialui.co/materialIcons/navigation/arrow_drop_down_white_192x192.png'
+          src={arrow}
           alt='arrow-down'
           className='arrow-down'
         />
