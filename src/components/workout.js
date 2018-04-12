@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom';
 
 import './workout.css';
 
-class Workout extends Component {
+export class Workout extends Component {
   onDelete(event) {
     const {workout_id} = this.props;
     const data = {workout_id};

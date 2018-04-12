@@ -6,7 +6,7 @@ import ExerciseDataSet from './exercise-data-set';
 
 import './exercise.css';
 
-class Exercise extends Component {
+export class Exercise extends Component {
   render() {
     const sets = this.props.sets.map((set, index) => {
       return <ExerciseDataSet key={index} setNumber={index} {...set} set_button={this.props.set_button} />

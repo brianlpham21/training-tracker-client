@@ -8,7 +8,7 @@ import ExerciseDataSetEdit from './exercise-data-set-edit';
 
 import './exercise-edit.css';
 
-class ExerciseEdit extends Component {
+export class ExerciseEdit extends Component {
   onEditExercise(workout_id, id, event) {
     event.preventDefault();
     this.props.dispatch(editExercise(workout_id, id, event.target.value))

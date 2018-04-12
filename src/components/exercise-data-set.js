@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './exercise-data-set.css';
 
-class ExerciseDataSet extends Component {
+export class ExerciseDataSet extends Component {
   render() {
     return (
       <tr className='exercise-data' id={this.props._id}>

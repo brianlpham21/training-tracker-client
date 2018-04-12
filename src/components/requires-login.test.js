@@ -7,6 +7,6 @@ import Footer from './footer';
 
 describe('<RequiresLogin/>', () => {
   it('Renders without crashing', () => {
-    shallow(<footer />);
+    shallow(<Footer />);
   });
 })

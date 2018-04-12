@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import './workout-instructions.css';
 
-class WorkoutInstructions extends Component {
+export class WorkoutInstructions extends Component {
   render() {
     return (
       <div className='workout-instructions-main'>

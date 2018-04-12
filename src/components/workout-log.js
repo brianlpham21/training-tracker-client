@@ -9,7 +9,7 @@ import WorkoutInstructions from './workout-instructions';
 
 import './workout-log.css';
 
-class WorkoutLog extends Component {
+export class WorkoutLog extends Component {
   componentDidMount() {
     this.props.dispatch(fetchWorkoutData());
   }

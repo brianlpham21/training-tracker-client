@@ -6,7 +6,7 @@ import logo from '../images/logo.png';
 
 import './how-page.css';
 
-class HowPage extends Component {
+export class HowPage extends Component {
   render() {
     return (
       <div className='how-page'>

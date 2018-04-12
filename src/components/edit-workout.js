@@ -12,7 +12,7 @@ import {Link} from 'react-router-dom';
 
 import './edit-workout.css';
 
-class EditWorkout extends Component {
+export class EditWorkout extends Component {
   componentDidMount() {
     this.props.dispatch(fetchWorkoutData());
   }

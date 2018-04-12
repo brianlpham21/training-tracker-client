@@ -7,7 +7,7 @@ import Workout from './workout';
 
 import './mini-workout-log.css';
 
-class MiniWorkoutLog extends Component {
+export class MiniWorkoutLog extends Component {
   componentDidMount() {
     this.props.dispatch(fetchWorkoutData());
   }

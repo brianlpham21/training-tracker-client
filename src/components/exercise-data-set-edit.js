@@ -6,7 +6,7 @@ import {editSetWeight, editSetRepetitions, deleteSet} from '../actions/sets';
 
 import './exercise-data-set-edit.css';
 
-class ExerciseDataSetEdit extends Component {
+export class ExerciseDataSetEdit extends Component {
   onEditSetWeight(workout_id, exercise_id, id, event) {
     this.props.dispatch(editSetWeight(workout_id, exercise_id, id, event.target.value, this.props.setNumber))
   }

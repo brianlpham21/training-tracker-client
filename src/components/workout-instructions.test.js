@@ -1,12 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import WorkoutInstructions from './workout-instructions';
-
-import Footer from './footer';
+import {WorkoutInstructions} from './workout-instructions';
 
 describe('<WorkoutInstructions/>', () => {
   it('Renders without crashing', () => {
-    shallow(<Footer />);
+    shallow(<WorkoutInstructions />);
   });
 })

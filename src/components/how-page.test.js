@@ -1,12 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import HowPage from './how-page';
-
-import Footer from './footer';
+import {HowPage} from './how-page';
 
 describe('<HowPage/>', () => {
   it('Renders without crashing', () => {
-    shallow(<Footer />);
+    shallow(<HowPage />);
   });
 })
