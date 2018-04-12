@@ -10,11 +10,11 @@ Training Tracker is hoping to expand to include features that will allow users t
 ## Screenshots
 
 [Landing_Page](/screenshots/landing_page.png) <br />
-[Registration_Page](/screenshots/registration.png)
-[Login_Page](/screenshots/login.png)
-[About](/screenshots/about.png)
-[User_Dashboard](/screenshots/dashboard.png)
-[Workout_Log](/screenshots/workout_log.png)
+[Registration_Page](/screenshots/registration.png) <br />
+[Login_Page](/screenshots/login.png) <br />
+[About](/screenshots/about.png) <br />
+[User_Dashboard](/screenshots/dashboard.png) <br />
+[Workout_Log](/screenshots/workout_log.png) <br />
 [Edit_Workout](/screenshots/edit_workout.png)
 
 ## UX
