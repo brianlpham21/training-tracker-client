@@ -23,12 +23,15 @@ Initial wireframes and User Flows for the project can be viewed below. The wiref
 
 ## Wireframe Images
 
-[Page_1](/screenshots/WF1.jpg)
-[Page_2](/screenshots/WF2.jpg)
+[Page_1](/screenshots/1.jpg)
+[Page_2](/screenshots/2.jpg)
+[Page_3](/screenshots/3.jpg)
+[Page_4](/screenshots/4.jpg)
+[Page_5](/screenshots/5.jpg)
 
 ## Live Site
 You can access the Training Tracker Application at:  https://determined-hermann-abe2c5.netlify.com/
 
 ## Technical
-- This application was built using HTML, CSS, JavaScript, jQuery, NodeJS, Express, Chai & Mocha Testing, MongoDB & Mongoose, React and Redux.
+- This application was built using HTML, CSS, JavaScript, NodeJS, Express, Chai & Mocha Testing, MongoDB & Mongoose, React and Redux.
 - The application is fully responsive, available for use on mobile devices, tablets, and desktop viewports.
