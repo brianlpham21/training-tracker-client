@@ -3,7 +3,7 @@ import {
     ADD_WORKOUT_SUCCESS,
     EDIT_WORKOUT_SUCCESS,
     DELETE_WORKOUT_DATA_SUCCESS,
-    WORKOUT_ERROR,
+    WORKOUT_ERROR
 } from '../actions/workouts';
 
 const initialState = {
