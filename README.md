@@ -35,3 +35,4 @@ You can access the Training Tracker Application at:  https://determined-hermann-
 ## Technical
 - This application was built using HTML, CSS, JavaScript, NodeJS, Express, Chai & Mocha Testing, MongoDB & Mongoose, React and Redux.
 - The application is fully responsive, available for use on mobile devices, tablets, and desktop viewports.
+- GitHub Repo Location for Server Side Code: https://github.com/brianlpham21/training-tracker-server
