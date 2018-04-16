@@ -1,5 +1,4 @@
 import reducer from './workouts';
-import {fetchWorkoutDataSuccess, addWorkoutSuccess} from '../actions/workouts';
 
 describe('workoutsReducer', () => {
   it('Should set the initial state when nothing is passed in', () => {
