@@ -5,7 +5,7 @@ The Training Tracker application allows users to effectively track their own fit
 
 The user interface for the Training Tracker application allows for the creation of customizable workouts; the tracker supports workouts and exercises with custom names and the input of sets & repetitions completed for each exercise at a given weight.
 
-Training Tracker is hoping to expand to include features that will allow users to view a comprehensive chart of their progress rather than the current log of workouts completed.
+Training Tracker is hoping to expand to include features that will allow users to view a comprehensive chart of their progress rather than the current log of workouts completed. 
 
 ## Screenshots
 
