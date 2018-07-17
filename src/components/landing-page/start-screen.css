@@ -37,17 +37,26 @@ li {
   padding: 5px;
 }
 
-.register-button, .login-button {
+.register-button, .login-button, .demo-button {
   background-color: #DCDCDC;
   border: 1.5px solid gold;
   border-radius: 12px;
   font-family: 'Titillium Web', sans-serif;
   font-size: 14px;
   padding: 9px 18px;
-
 }
 
-.register-button:hover, .login-button:hover {
+.demo-button {
+  margin-top: 5px;
+  padding: 9px 45px;
+  opacity: .9;
+}
+
+.demo-button-link {
+  display: block
+}
+
+.register-button:hover, .login-button:hover, .demo-button:hover {
   box-shadow: 0 0 7px white;
   cursor: pointer;
 }

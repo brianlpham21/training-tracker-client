@@ -28,6 +28,11 @@ export default function StartScreen() {
               <button className='login-button'>Log In</button>
             </Link>
           </li>
+          <li className="demo-button-link">
+            <Link to='/register'>
+              <button className='demo-button'>View Demo</button>
+            </Link>
+          </li>
         </ul>
         <img
           src={arrow}
