@@ -10,11 +10,13 @@ import arrow from '../../images/arrow.png';
 import './start-screen.css';
 
 export class StartScreen extends React.Component {
-  componentWillMount() {
-      this.state = {
-        loading: false
-      };
-    }
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      loading: false
+    };
+  }
 
   onClick() {
     this.setState({ loading: true });
