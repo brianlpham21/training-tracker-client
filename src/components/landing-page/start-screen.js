@@ -12,7 +12,7 @@ import './start-screen.css';
 export class StartScreen extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       loading: false
     };
@@ -50,7 +50,7 @@ export class StartScreen extends React.Component {
               <button className='demo-button' onClick={() => this.onClick()}>View Demo</button>
             </li>
           </ul>
-          { this.state.loading && <img src="https://www.quodfinancial.com/wp-content/themes/pro-child/QUOD-Diagram/loading_spinner.gif" className="loading-spinner"/> }
+          { this.state.loading && <img src="https://www.quodfinancial.com/wp-content/themes/pro-child/QUOD-Diagram/loading_spinner.gif" alt="loading spinner" className="loading-spinner"/> }
           <img
             src={arrow}
             alt='arrow-down'
