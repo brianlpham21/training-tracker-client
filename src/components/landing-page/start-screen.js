@@ -10,9 +10,16 @@ import arrow from '../../images/arrow.png';
 import './start-screen.css';
 
 export class StartScreen extends React.Component {
+  componentWillMount() {
+      this.state = {
+        loading: false
+      };
+    }
+
   onClick() {
+    this.setState({ loading: true });
     const {username, password} = {username: 'demo', password: 'brianbrian'};
-    return this.props.dispatch(login(username, password))
+    return this.props.dispatch(login(username, password));
   }
 
   render() {
@@ -41,6 +48,7 @@ export class StartScreen extends React.Component {
               <button className='demo-button' onClick={() => this.onClick()}>View Demo</button>
             </li>
           </ul>
+          { this.state.loading && <img src="https://www.quodfinancial.com/wp-content/themes/pro-child/QUOD-Diagram/loading_spinner.gif" className="loading-spinner"/> }
           <img
             src={arrow}
             alt='arrow-down'
