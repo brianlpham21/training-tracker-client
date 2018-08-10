@@ -12,9 +12,9 @@ You can access the Training Tracker Application at: https://training-tracker.net
 
 ## Screenshots
 
-<img src="/screenshots/landing_page.png" width="50%" display="inline-block">
-<img src="/screenshots/workout_log.png" width="50%" display="inline-block">
-<img src="/screenshots/edit_workout.png" width="50%" display="inline-block">
+<img src="/screenshots/landing_page.png" width="30%" display="inline-block">
+<img src="/screenshots/workout_log.png" width="30%" display="inline-block">
+<img src="/screenshots/edit_workout.png" width="30%" display="inline-block">
 
 ## UX
 
