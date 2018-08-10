@@ -5,7 +5,10 @@ The Training Tracker application allows users to effectively track their own fit
 
 The user interface for the Training Tracker application allows for the creation of customizable workouts; the tracker supports workouts and exercises with custom names and the input of sets & repetitions completed for each exercise at a given weight.
 
-Training Tracker is hoping to expand to include features that will allow users to view a comprehensive chart of their progress rather than the current log of workouts completed. 
+Training Tracker is hoping to expand to include features that will allow users to view a comprehensive chart of their progress rather than the current log of workouts completed.
+
+## Live Site
+You can access the Training Tracker Application at: https://training-tracker.netlify.com/
 
 ## Screenshots
 
@@ -28,9 +31,6 @@ Initial wireframes and User Flows for the project can be viewed below. The wiref
 [Page_3](/screenshots/3.jpg)
 [Page_4](/screenshots/4.jpg)
 [Page_5](/screenshots/5.jpg)
-
-## Live Site
-You can access the Training Tracker Application at:  https://determined-hermann-abe2c5.netlify.com/
 
 ## Technical
 - This application was built using HTML, CSS, JavaScript, NodeJS, Express, Chai & Mocha Testing, MongoDB & Mongoose, React and Redux.
