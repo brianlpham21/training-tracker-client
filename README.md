@@ -13,12 +13,15 @@ You can access the Training Tracker Application at: https://training-tracker.net
 ## Screenshots
 
 Landing Page
+
 <img src="/screenshots/landing_page.png" width="70%">
 
 Workout Log
+
 <img src="/screenshots/workout_log.png" width="70%">
 
 Edit Workout Page
+
 <img src="/screenshots/edit_workout.png" width="70%">
 
 ## UX
